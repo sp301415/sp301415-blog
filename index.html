@@ -2,4 +2,20 @@
 layout: default
 ---
 
-Hello, World!
+{% for post in paginator.posts %}
+<div class="post-item pv4">
+    <div class="post-date gray pv1">{{ post.date | date: site.date_format }}</div>
+    <div class="post-title mb3">
+        <a class="post-link dark-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+        </a>
+    </div>
+    <span class="post-summary">
+        {% if post.summary %}
+        {{ post.summary }}
+        {% else %}
+        {{ post.excerpt }}
+        {% endif %}
+    </span>
+</div>
+{% endfor %}
