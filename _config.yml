@@ -18,20 +18,29 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Null Space
+email: sp301415@gmail.com
+author: sp301415
+description: "sp301415의 블로그"
+baseurl: ""
+url: "https://sp301415.github.io"
+date_format: "%Y-%m-%d"
+
+twitter_username: sp301415
+github_username:  sp301415
 
 # Build settings
-theme: minima
+markdown: kramdown
+permalink: /:title/
+paginate: 5
+paginate_path: "/page/:num"
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  math_engine: null
+sass:
+  style: compressed
 plugins:
+  - jekyll-paginate
   - jekyll-feed
 
 # Exclude from processing.
@@ -41,15 +50,14 @@ plugins:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

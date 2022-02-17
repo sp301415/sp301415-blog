@@ -1,0 +1,20 @@
+a {
+    @extend .blue;
+    text-decoration: none;
+}
+  
+a:hover,
+a:focus,
+a:active {
+    @extend .dark-gray;
+}
+
+.dark-link {
+    @extend .dark-gray;
+}
+
+.dark-link:hover, 
+.dark-link:focus,
+.dark-link:active {
+    opacity: 0.88;
+}

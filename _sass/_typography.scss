@@ -1,0 +1,90 @@
+html {
+    font-size: $base-font-size;
+}
+
+abbr {
+    @extend .bb
+}
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+    font-size: 100%;
+    color: $dark-gray;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: $h4;
+    margin-top: 0;
+    margin-bottom: $spacing-medium;
+    font-weight: 400;
+}
+
+ol,
+ul {
+    padding-left: $spacing-large;
+}
+
+pre,
+code,
+samp {
+    font-family: $monospace-font-family;
+    font-size: 0.95rem;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: $spacing-medium;
+    overflow-x: scroll;
+}
+
+hr {
+    margin-top: $spacing-large;
+    margin-bottom: $spacing-large;
+}
+
+h1,
+.h1 {
+    font-size: $h1;
+}
+
+h2,
+.h2 {
+    font-size: $h2;
+}
+
+h3,
+.h3 {
+    font-size: $h3;
+}
+
+h4,
+.h4 {
+    font-size: $h4;
+}
+
+h5,
+.h5 {
+    font-size: $h5;
+}
+
+h6,
+.h6 {
+    font-size: $h6;
+}
