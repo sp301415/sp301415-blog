@@ -2,20 +2,50 @@
 layout: home
 ---
 
-{% for post in paginator.posts %}
-<div class="post-item">
-    <div class="post-date">{{ post.date | date: site.date_format }}</div>
-    <div class="post-title">
-        <a class="post-link dark-link" href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
-        </a>
+<div class="post-list">
+    {% for post in paginator.posts %}
+    <div class="post-item">
+        <div class="post-date">{{ post.date | date: site.date_format }}</div>
+        <div class="post-title">
+            <a class="post-link dark-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+            </a>
+        </div>
+        <span class="post-summary">
+            {% if post.description %}
+            {{ post.description }}
+            {% else %}
+            {{ post.excerpt }}
+            {% endif %}
+        </span>
     </div>
-    <span class="post-summary">
-        {% if post.description %}
-        {{ post.description }}
-        {% else %}
-        {{ post.excerpt }}
-        {% endif %}
-    </span>
+    {% endfor %}
 </div>
-{% endfor %}
+
+{% if paginator.total_pages != 1 %}
+<div class="pagination cf">
+    <div class="pagination-prev-button">
+        {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+        <a class="pagination-link" href="{{ site.baseurl }}/" rel="prev">이전 포스트</a>
+        {% else %}
+        <a class="pagination-link" href="{{ paginator.previous_page_path }}" rel="prev">이전 포스트</a>
+        {% endif %}
+        {% else %}
+        <span class="pagination-link disabled">이전 포스트</span>
+        {% endif %}
+    </div>
+
+    <div class="pagination-next-button">
+        {% if paginator.next_page %}
+        <a class="pagination-link" href="{{ paginator.next_page_path }}" rel="next">다음 포스트</a>
+        {% else %}
+        <span class="pagination-link disabled" rel="next">다음 포스트</span>
+        {% endif %}
+    </div>
+
+    <div class="pagination-meta">
+        {{ paginator.page }} / {{ paginator.total_pages }}
+    </div>
+</div>
+{% endif %}

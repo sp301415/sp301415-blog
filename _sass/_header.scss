@@ -1,6 +1,8 @@
 .site-header {
-    padding: $spacing-large $spacing-medium $spacing-medium $spacing-medium;
     text-align: center;
+
+    padding: $spacing-medium;
+    padding-top: $spacing-large;
 }
 
 .site-title {
@@ -19,11 +21,12 @@
 
 @media #{$breakpoint-not-small} {
     .site-title {
-        font-size: inherit;
+        font-size: 1.1rem;
         float: left;
     }
 
     .site-nav {
+        font-size: 1.1rem;
         float: right;
         margin: 0;
     }

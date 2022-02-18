@@ -10,13 +10,13 @@ html {
 
 @media #{$breakpoint-medium} {
     html {
-        font-size: $base-font-size + 3px;
+        font-size: $base-font-size + 2px;
     }
 }
 
 @media #{$breakpoint-large} {
     html {
-        font-size: $base-font-size + 3px;
+        font-size: $base-font-size + 2px;
     }
 }
 

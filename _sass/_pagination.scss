@@ -1,0 +1,40 @@
+.pagination {
+    margin-top: $spacing-extra-large;
+    margin-bottom: $spacing-medium;
+}
+
+.pagination-prev-button {
+    float: left;
+}
+
+.pagination-next-button {
+    float: right;
+}
+
+.pagination-meta {
+    text-align: center;
+    overflow: hidden;
+}
+
+.pagination-link {
+    color: $dark-gray;
+    
+    padding: 1em 1.5em;
+
+    background-color: #fafafa;
+    border: 1px solid $near-white; 
+    border-radius: $border-radius-2;
+
+    transition: all .15s ease-in;
+}
+
+.pagination-link:hover, 
+.pagination-link:focus, 
+.pagination-link:active {
+    background-color: $white;
+    opacity: 0.88;
+}
+
+.pagination .disabled {
+    opacity: 0.5;
+}

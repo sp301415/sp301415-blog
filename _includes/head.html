@@ -2,8 +2,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.dir == "/" %}
+    <meta name="robots" content="all">
+    {% else %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
 
-    {% seo %}
+    <title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title | strip_html }}</title>
 
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% seo title=false %}
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
