@@ -1,6 +1,10 @@
+html {
+    font-size: $base-font-size;
+}
+
 @media #{$breakpoint-not-small} {
     html {
-        font-size: $base-font-size + 1px !important;
+        font-size: $base-font-size + 1px;
     }
 
     .site-title {
@@ -15,12 +19,12 @@
 
 @media #{$breakpoint-medium} {
     html {
-        font-size: $base-font-size + 2px !important;
+        font-size: $base-font-size + 2px;
     }
 }
 
 @media #{$breakpoint-large} {
     html {
-        font-size: $base-font-size + 3px !important;
+        font-size: $base-font-size + 3px;
     }
 }

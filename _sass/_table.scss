@@ -1,0 +1,16 @@
+table {
+    @extend .collapse, .mb3, .ba, .br2, .b--black-10, .tl;
+}
+
+
+table th {
+    @extend .br1, .pv2, .ph3, .bt, .bb, .b--black-10, .ttu;
+}
+
+table tbody tr {
+    @extend .striped--near-white;
+}
+
+table td {
+    @extend .pv2, .ph3;
+}

@@ -30,15 +30,19 @@ twitter_username: sp301415
 github_username:  sp301415
 
 # Build settings
-markdown: kramdown
 permalink: /:title/
+
 paginate: 5
 paginate_path: "/page/:num"
+
+markdown: kramdown
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   math_engine: null
+
 sass:
   style: compressed
+
 plugins:
   - jekyll-paginate
   - jekyll-feed
@@ -61,3 +65,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Default values 
+defaults:
+  -
+    scope:
+      path: 
+      type: "posts"
+    values:
+      layout: "post"

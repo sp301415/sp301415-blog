@@ -10,3 +10,7 @@
     word-break: keep-all;
     word-wrap: break-word;
 }
+
+.tag + .tag {
+    @extend .ml1
+}
