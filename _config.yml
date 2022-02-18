@@ -37,8 +37,11 @@ paginate_path: "/page/:num"
 
 markdown: kramdown
 kramdown:
-  footnote_backlink: "&#8617;&#xfe0e;"
+  input: GFM
+  syntax_highlighter: rouge
+  # Use KaTeX and highlight.js
   math_engine: null
+  footnote_backlink: "&#8617;&#xfe0e;"
 
 sass:
   style: compressed

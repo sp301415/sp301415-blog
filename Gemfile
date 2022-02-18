@@ -10,6 +10,11 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "webrick"
+gem "rouge"
+
+# Javascript Execution
+gem "execjs"
+gem "mini_racer"
 
 group :jekyll_plugins do
   gem "jekyll-paginate"

@@ -1,16 +1,51 @@
+.post-item {
+    padding-top: $spacing-large;
+    padding-bottom: $spacing-large;
+}
+
 .post-item:not(:last-child) {
-    @extend .bb, .b--near-white;
+    border-bottom: 1px solid $near-white;
+}
+
+.post-date {
+    color: $gray;
+
+    padding-top: $spacing-extra-small;
+    padding-bottom: $spacing-extra-small;
 }
 
 .post-title {
-    font-family: $heading-font-family;
+    // Same as H1
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
     font-size: $font-size-2;
+
     word-break: keep-all;
     word-wrap: break-word;
+
+    margin-bottom: $spacing-medium;
+}
+
+.post-tags {
+    padding-top: $spacing-extra-small;
+    padding-bottom: $spacing-medium;
+}
+
+.tag {
+    color: $dark-gray;
+    background-color: $light-gray;
+    border-radius: $border-radius-2;
+
+    padding-top: $spacing-extra-small;
+    padding-bottom: $spacing-extra-small;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
 }
 
 .tag + .tag {
-    @extend .ml1
+    margin-left: $spacing-extra-small;
+}
+
+.post-content {
+    margin-top: $spacing-large;
 }

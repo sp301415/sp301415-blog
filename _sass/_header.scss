@@ -1,3 +1,30 @@
+.site-header {
+    padding: $spacing-large $spacing-medium $spacing-medium $spacing-medium;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.site-nav {
+    font-weight: 300;
+    margin-top: $spacing-medium;
+}
+
 .site-nav-link + .site-nav-link {
-    @extend .ml3
+    margin-left: $spacing-medium;
+}
+
+@media #{$breakpoint-not-small} {
+    .site-title {
+        font-size: inherit;
+        float: left;
+    }
+
+    .site-nav {
+        float: right;
+        margin: 0;
+    }
 }

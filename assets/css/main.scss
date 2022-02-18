@@ -1,14 +1,14 @@
 --- 
 --- 
 
-@import 'tachyons';
-
 @import 'variables';
 
+@import 'clearfix';
 @import 'header';
-@import 'link';
+@import 'layout';
+@import 'links';
 @import 'measure';
-@import 'media-queries';
 @import 'post';
-@import 'table';
+@import 'syntax-highlight';
+@import 'tables';
 @import 'typography';

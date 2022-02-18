@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    color: $blue; 
+    transition: color .15s ease-in;
+}
+
+
+a:hover, 
+a:focus, 
+a:active {
+    color: $dark-gray;
+}
+
+.dark-link {
+    text-decoration: none;
+    color: $dark-gray;
+    transition: opacity .15s ease-in;
+}
+
+.dark-link:hover,
+.dark-link:focus,
+.dark-link:active {
+    color: $dark-gray;
+    opacity: .8;
+}

@@ -1,5 +1,27 @@
+html {
+    font-size: $base-font-size;
+}
+
+@media #{$breakpoint-not-small} {
+    html {
+        font-size: $base-font-size + 1px;
+    }
+}
+
+@media #{$breakpoint-medium} {
+    html {
+        font-size: $base-font-size + 3px;
+    }
+}
+
+@media #{$breakpoint-large} {
+    html {
+        font-size: $base-font-size + 3px;
+    }
+}
+
 abbr {
-    @extend .bb
+    border-bottom: 1px black dotted;
 }
 
 body {
@@ -14,9 +36,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
+    
     margin-top: 1em;
     margin-bottom: .5em;
 }
@@ -25,9 +47,10 @@ p,
 dl,
 ol,
 ul {
+    font-weight: 400;
+
     margin-top: 0;
     margin-bottom: $spacing-medium;
-    font-weight: 400;
 }
 
 ol,
@@ -35,22 +58,32 @@ ul {
     padding-left: $spacing-large;
 }
 
-li::marker {
-    content: "•";
-    position: absolute;
-    left: -16px;
-}
-
 pre,
 code {
     font-family: $monospace-font-family;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 pre {
+    overflow-x: scroll;
+
+    padding: $spacing-medium;
     margin-top: 0;
     margin-bottom: $spacing-medium;
-    overflow-x: scroll;
+}
+
+code {
+    background-color: $near-white;
+
+    padding: .2rem .4rem;
+    margin: 0 .1rem;
+    border-radius: $border-radius-2;
+}
+
+pre code {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
 }
 
 hr {
