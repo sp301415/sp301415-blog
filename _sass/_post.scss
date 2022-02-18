@@ -31,10 +31,16 @@
     background-color: $light-gray;
     border-radius: $border-radius-2;
 
+    transition: opacity .15s ease-in;
+
     padding-top: $spacing-extra-small;
     padding-bottom: $spacing-extra-small;
     padding-left: $spacing-small;
     padding-right: $spacing-small;
+}
+
+.tag:hover {
+    opacity: .7;
 }
 
 .tag + .tag {

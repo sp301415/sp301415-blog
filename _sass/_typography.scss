@@ -2,21 +2,21 @@ html {
     font-size: $base-font-size;
 }
 
-@media #{$breakpoint-not-small} {
+@media #{$media-small} {
     html {
         font-size: $base-font-size + 1px;
     }
 }
 
-@media #{$breakpoint-medium} {
+@media #{$media-medium} {
     html {
         font-size: $base-font-size + 2px;
     }
 }
 
-@media #{$breakpoint-large} {
+@media #{$media-large} {
     html {
-        font-size: $base-font-size + 2px;
+        font-size: $base-font-size + 3px;
     }
 }
 
@@ -58,14 +58,11 @@ ul {
     padding-left: $spacing-large;
 }
 
-pre,
-code {
-    font-family: $monospace-font-family;
-    font-size: 0.85rem;
-}
 
 pre {
     overflow-x: scroll;
+
+    line-height: 1.5;
 
     padding: $spacing-medium;
     margin-top: 0;
@@ -75,12 +72,17 @@ pre {
 code {
     background-color: $near-white;
 
+    font-family: $monospace-font-family;
+    font-size: 0.85rem;
+
     padding: .2rem .4rem;
     margin: 0 .1rem;
     border-radius: $border-radius-2;
 }
 
 pre code {
+    // Controlled in syntax-highlight
+    background-color: transparent;
     padding: 0;
     margin: 0;
     border-radius: 0;

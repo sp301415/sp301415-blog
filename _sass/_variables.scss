@@ -2,7 +2,7 @@
 $base-font-size: 14px !default;
 $bold-font-weight: bold !default;
 $font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" !default;
-$line-height: 1.75 !default;
+$line-height: 1.85 !default;
 
 $heading-font-family: $font-family !default;
 $heading-font-weight: 700 !default;
@@ -154,3 +154,7 @@ $washed-red: #ffdfdf !default;
 $breakpoint-not-small: 'screen and (min-width: 30em)' !default;
 $breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
 $breakpoint-large: 'screen and (min-width: 60em)' !default;
+
+$media-small: 'screen and (min-width: 32em)' !default;
+$media-medium: 'screen and (min-width: 46em)' !default;
+$media-large: 'screen and (min-width: 64em)' !default;

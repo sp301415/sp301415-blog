@@ -18,3 +18,9 @@ footer {
 .page-content {
     padding: $spacing-medium;
 }
+
+@media print {
+    .site-header, .site-footer {
+        display: none;
+    }
+}

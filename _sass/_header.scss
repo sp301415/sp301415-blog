@@ -6,28 +6,17 @@
 }
 
 .site-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    float: left;
 }
 
 .site-nav {
+    font-size: 1.2rem;
     font-weight: 300;
-    margin-top: $spacing-medium;
+    float: right;
 }
 
 .site-nav-link + .site-nav-link {
     margin-left: $spacing-medium;
-}
-
-@media #{$breakpoint-not-small} {
-    .site-title {
-        font-size: 1.1rem;
-        float: left;
-    }
-
-    .site-nav {
-        font-size: 1.1rem;
-        float: right;
-        margin: 0;
-    }
 }

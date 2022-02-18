@@ -1,0 +1,15 @@
+---
+---
+
+User-agent: *
+
+Disallow: /assets/
+Disallow: /static/
+
+Disallow: /page/
+Disallow: /404
+
+Disallow: /about/
+Disallow: /tags/
+
+Sitemap: {{ site.url }}/sitemap.xml

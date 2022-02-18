@@ -40,7 +40,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  # Use KaTeX and highlight.js
+  # Use KaTeX
   math_engine: null
   footnote_backlink: "&#8617;&#xfe0e;"
 

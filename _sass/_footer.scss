@@ -2,18 +2,9 @@ footer {
     font-size: $font-size-6;
     color: $gray;
 
-    padding: $spacing-medium;
-    padding-bottom: $spacing-large;
+    padding: $spacing-large $spacing-medium;
 }
 
-footer a {
-    color: $gray;
-}
-
-.author-info {
+.copyright {
     float: left;
-}
-
-.rss-link {
-    float: right;
 }
