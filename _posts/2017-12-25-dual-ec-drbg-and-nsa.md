@@ -1,7 +1,7 @@
 ---
 title: Dual_EC_DRBG와 NSA
 tag: [수학, 암호학]
-summary: Dual_EC_DRBG에 얽힌 NSA의 백도어 논란을 정리합니다.
+description: Dual_EC_DRBG에 얽힌 NSA의 백도어 논란을 정리합니다.
 ---
 
 지난 2013년, 에드워드 스노든이 폭로한 NSA(National Security Agency)의  [PRISM](https://namu.wiki/w/프리즘%20폭로%20사건) 프로젝트는 암호학계에도 엄청난 반향을 불러일으켰다. 2006년 NIST가 NSA와 협력해 미국 암호화 표준 규격을 발표했을 때부터 생겨난 의심이 사실임이 입증되었고, 나아가 그동안 NSA가 암호와의 전쟁에서 승리하고 있었다는 사실도 명백해졌다. 이 전쟁의 중심에 서 있었던 알고리즘이 바로 **Dual_EC_DRBG**다.

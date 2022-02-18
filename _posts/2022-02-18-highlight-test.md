@@ -1,7 +1,7 @@
 ---
 title: Syntax Highlighting Test
 tags: [개발]
-summary: Hello, World!
+description: Hello, World!
 ---
 
 # Default

@@ -1,7 +1,7 @@
 ---
 title: 애플 실리콘용 sage와 pwntools 설치 에러 해결
 tags: ["개발", "암호학"]
-summary: 애플 실리콘에서 sage와 pwntools를 같이 설치할때 생기는 에러를 해결하는 법을 공유합니다.
+description: 애플 실리콘에서 sage와 pwntools를 같이 설치할때 생기는 에러를 해결하는 법을 공유합니다.
 ---
 
 ### TL;DR

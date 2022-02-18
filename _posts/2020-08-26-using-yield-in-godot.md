@@ -1,7 +1,7 @@
 ---
 title: 고도 엔진에서 yield 사용하기
 tag: [게임, 개발]
-summary: 고도 엔진의 유용한 기능 중 하나인 yield를 이용한 코루틴의 사용법을 정리합니다.
+description: 고도 엔진의 유용한 기능 중 하나인 yield를 이용한 코루틴의 사용법을 정리합니다.
 ---
 
 ## 코루틴 (Coroutine)

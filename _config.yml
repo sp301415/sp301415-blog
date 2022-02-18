@@ -49,6 +49,7 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -71,6 +72,11 @@ exclude:
 
 # Default values 
 defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: /static/ogimg/default.jpg
   -
     scope:
       path: 
