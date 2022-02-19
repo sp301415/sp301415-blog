@@ -12,7 +12,8 @@ gem "jekyll"
 gem "webrick"
 gem "rouge"
 
-# Javascript Execution
+# KaTeX
+gem "kramdown-math-katex"
 gem "execjs"
 gem "mini_racer"
 

@@ -38,10 +38,9 @@ paginate_path: "/page/:num"
 
 markdown: kramdown
 kramdown:
-  input: GFM
+  input: GFMKatex
   syntax_highlighter: rouge
-  # Use KaTeX
-  math_engine: null
+  math_engine: katex
   footnote_backlink: "&#8617;&#xfe0e;"
 
 sass:
