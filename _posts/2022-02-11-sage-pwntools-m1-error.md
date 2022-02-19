@@ -30,36 +30,9 @@ Output in format: Requested package -> Available versions
 `pip`을 이용해도 안 되는 건 매한가지였다.
 ```
 ➜ pip install pwntools
-  error: subprocess-exited-with-error
+error: subprocess-exited-with-error
   
-  × python setup.py bdist_wheel did not run successfully.
-  │ exit code: 1
-  ╰─> [3 lines of output]
-      running bdist_wheel
-      running build
-      error: [Errno 2] No such file or directory: '/private/var/folders/6b/nrw239cs5hqfrl7m0xk96zwc0000gn/T/pip-install-7c2tjrc7/unicorn_5d9cf0ade48441adbdd3a12fd00cab19/../../include/unicorn'
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for unicorn
-  Running setup.py clean for unicorn
-Failed to build unicorn
-Installing collected packages: unicorn, sortedcontainers, pyserial, pyelftools, certifi, urllib3, six, pysocks, pyparsing, pygments, pycparser, psutil, plumbum, MarkupSafe, intervaltree, idna, charset-normalizer, capstone, rpyc, ropgadget, requests, python-dateutil, packaging, mako, colored-traceback, cffi, pynacl, cryptography, bcrypt, paramiko, pwntools
-  Running setup.py install for unicorn ... error
-  error: subprocess-exited-with-error
-  
-  × Running setup.py install for unicorn did not run successfully.
-  │ exit code: 1
-  ╰─> [5 lines of output]
-      running install
-      /opt/homebrew/Caskroom/miniforge/base/envs/sage-test/lib/python3.9/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-        warnings.warn(
-      running build
-      error: [Errno 2] No such file or directory: '/private/var/folders/6b/nrw239cs5hqfrl7m0xk96zwc0000gn/T/pip-install-7c2tjrc7/unicorn_5d9cf0ade48441adbdd3a12fd00cab19/../../include/unicorn'
-      [end of output]
-  
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-error: legacy-install-failure
+(대충 중간 생략)
 
 × Encountered error while trying to install package.
 ╰─> unicorn

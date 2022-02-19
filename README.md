@@ -5,4 +5,6 @@ Developed & Written by sp301415.
 ## 블로그 정보
 - Built with GitHub Pages & Jekyll
 - Theme inspired by [Pixyll](https://github.com/johno/pixyll)
-- Colors & Type scales based on [Tachyons](https://tachyons.io/)
+- Syntax Highlighting by Rouge & [pygments-github-css](https://github.com/PhilipTrauner/pygments-github-css/blob/master/github.css)
+- Math Rendering by KaTeX
+- Contact Form by [FormSpark](https://formspark.io/)

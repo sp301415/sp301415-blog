@@ -1,0 +1,61 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type=email], 
+textarea[name=message] {
+    padding: $spacing-small;
+    margin-top: $spacing-extra-small;
+    margin-bottom: $spacing-medium;
+
+    font-size: inherit;
+
+    outline: none;
+    border: 1px solid $moon-gray;
+    border-radius: $border-radius-1;
+}
+
+input[type=email]:focus,
+textarea[name=message]:focus {
+    border: 1px solid $blue;
+    outline: 1px solid $blue;
+}
+
+
+input[type=email] {
+    font-size: 1.0rem;
+}
+
+textarea[name=message] {
+    font-family: inherit;
+
+    resize: vertical;
+    height: $height-3 + $height-4;
+}
+
+.form-button {
+    color: $white;
+    background-color: $blue;
+    transition: background-color .15s ease-in;
+
+    font-size: inherit;
+    
+    padding: $spacing-small + $spacing-extra-small;
+    margin-top: $spacing-medium;
+
+    border: 0;
+    border-radius: $border-radius-1;
+}
+
+.form-button:hover{
+    cursor: pointer;
+
+    background-color: lighten($blue, 10);
+}
+
+.form-button:active {
+    background-color: darken($blue, 10);
+    transition: none;
+}

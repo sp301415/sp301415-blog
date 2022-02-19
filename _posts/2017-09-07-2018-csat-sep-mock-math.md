@@ -35,7 +35,7 @@ $$
 
 또한 $\sin(2^n\pi x)$의 주기는 $\displaystyle \frac{1}{2^n} = a_{n+1}-a_n$이다. 즉 처음 몇 개만 그래프를 그려 보면
 
-<p class="center">
+<p class="text-center">
   <span id = 'sin'></span>
 </p>
 
@@ -43,7 +43,7 @@ $$
 
 이제 $F(x)=\displaystyle\int_0^x f(x) dx = -\frac{1}{2^n\pi}(\cos(2^n\pi x)-1)$를 생각해 보자.
 
-<p class="center">
+<p class="text-center">
   <span id = 'coslarge'></span>
 </p>
 
@@ -69,7 +69,7 @@ $$
 
 $\overrightarrow{OB} \cdot \overrightarrow{OP} = 0$에서 점 $P$는 $xy$ 평면 위에 존재한다는 것을 알 수 있다. 또한 $\lvert \overrightarrow{OP} \rvert \le 4$에서 $P$는 $x^2+y^2=16$ 내부의 점임을 알 수 있다. 이 때 최대는 $P$가 원의 경계에 있고, $\overrightarrow{BP} = k\overrightarrow{PQ}$일 때이다. 즉,
 
-<p class="center">
+<p class="text-center">
   <span id = 'vector-max'></span>
 </p>
 
@@ -83,7 +83,7 @@ $$
 
 최소는 자명하게 $\overrightarrow{OB} = k\overrightarrow{OQ}$일 때이다. 즉,
 
-<p class="center">
+<p class="text-center">
   <span id = 'vector-min'></span>
 </p>
 

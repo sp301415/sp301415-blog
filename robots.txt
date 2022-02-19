@@ -6,10 +6,12 @@ User-agent: *
 Disallow: /assets/
 Disallow: /static/
 
-Disallow: /page/
 Disallow: /404
+Disallow: /thanks/
 
+Disallow: /page/
 Disallow: /about/
 Disallow: /tags/
+Disallow: /contact/
 
 Sitemap: {{ site.url }}/sitemap.xml
