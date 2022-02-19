@@ -5,6 +5,12 @@
     padding: $spacing-large $spacing-medium;
 }
 
-.copyright {
-    float: left;
+.site-footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.rss-link {
+    color: $gray;
 }

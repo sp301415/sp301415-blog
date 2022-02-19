@@ -2,21 +2,9 @@ html {
     font-size: $base-font-size;
 }
 
-@media #{$media-small} {
-    html {
-        font-size: $base-font-size + 1px;
-    }
-}
-
 @media #{$media-medium} {
     html {
         font-size: $base-font-size + 2px;
-    }
-}
-
-@media #{$media-large} {
-    html {
-        font-size: $base-font-size + 3px;
     }
 }
 

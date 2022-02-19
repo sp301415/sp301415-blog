@@ -76,7 +76,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: /static/ogimg/default.jpg
+      image: /assets/ogimg/default.jpg
       robots: noindex
   -
     scope:

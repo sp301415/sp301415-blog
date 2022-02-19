@@ -10,9 +10,9 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "webrick"
-gem "rouge"
 
-# KaTeX
+# Kramdown extensions
+gem "rouge"
 gem "kramdown-math-katex"
 gem "execjs"
 gem "mini_racer"
