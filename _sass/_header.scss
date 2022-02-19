@@ -1,26 +1,41 @@
 .site-header {
-    text-align: center;
-
-    padding: $spacing-medium;
+    padding-left: $spacing-medium;
+    padding-right: $spacing-medium;
     padding-top: $spacing-large;
+    padding-bottom: 0;
 }
 
 .site-header-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-direction: row;
     align-items: center;
 }
 
 .site-title {
-    font-size: 1.25rem;
+    font-size: $font-size-3;
     font-weight: 700;
 }
 
 .site-nav {
-    font-weight: 300;
+    margin-top: $spacing-small;
 }
 
 .site-nav-link + .site-nav-link {
     margin-left: $spacing-medium;
+}
+
+@media #{$media-phone} {
+    .site-header-wrapper {
+        flex-direction: row;
+    }
+
+    .site-title {
+        font-size: 1.125rem;
+    }
+
+    .site-nav {
+        font-size: 1.125rem;
+        margin-top: 0;
+    }
 }

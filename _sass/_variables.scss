@@ -155,6 +155,4 @@ $breakpoint-not-small: 'screen and (min-width: 30em)' !default;
 $breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
 $breakpoint-large: 'screen and (min-width: 60em)' !default;
 
-$media-small: 'screen and (min-width: 32em)' !default;
-$media-medium: 'screen and (min-width: 46em)' !default;
-$media-large: 'screen and (min-width: 64em)' !default;
+$media-phone: 'screen and (min-width: 600px)' !default;
