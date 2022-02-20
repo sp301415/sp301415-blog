@@ -2,12 +2,6 @@ html {
     font-size: $base-font-size;
 }
 
-@media #{$media-phone} {
-    html {
-        font-size: $base-font-size + 2px;
-    }
-}
-
 abbr {
     border-bottom: 1px black dotted;
 }
@@ -77,9 +71,25 @@ ul {
     padding-left: $spacing-large;
 }
 
+ol > li,
+ul > li {
+    margin-bottom: $spacing-small;
+}
+
+li > ol,
+li > ul{
+    // If nested
+    margin-top: $spacing-small;
+    margin-bottom: 0;
+}
+
+input[class=task-list-item-checkbox] {
+    margin-right: $spacing-small;
+}
+
 
 pre {
-    overflow-x: scroll;
+    overflow-x: auto;
 
     line-height: 1.5;
 
@@ -116,6 +126,7 @@ hr {
 
 blockquote {
     margin: 0;
-    padding-left: $spacing-medium + $spacing-small;
-    border-left: 5px solid $gray;
+    // padding-left: unquote("calc(#{$spacing-large} - 5px)");
+    padding-left: $spacing-large - .3rem;
+    border-left: .3rem solid $gray;
 }
