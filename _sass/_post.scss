@@ -57,6 +57,8 @@
 
 .post-footer {
     margin-top: $spacing-extra-large;
+    // Remove giscus's own 3rem padding
+    margin-bottom: -3rem;
     padding-top: $spacing-large;
     border-top: 1px solid $moon-gray;
 }
