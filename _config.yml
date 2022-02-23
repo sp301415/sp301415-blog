@@ -33,7 +33,7 @@ github_username:  sp301415
 # Build settings
 permalink: /:title/
 
-paginate: 5
+paginate: 6
 paginate_path: "/page/:num"
 
 markdown: kramdown

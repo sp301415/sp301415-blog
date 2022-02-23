@@ -6,3 +6,13 @@
 .post-item:not(:last-child) {
     border-bottom: 1px solid $near-white;
 }
+
+.post-title-index {
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+    font-size: $font-size-3;
+    word-break: keep-all;
+    word-wrap: break-word;
+
+    margin-bottom: 0.75rem;
+}

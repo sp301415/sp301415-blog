@@ -5,9 +5,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
         <div class="post-date">{{ page.date | date: site.date_format }}</div>
-        <div class="post-title">
-            {{ page.title | escape }}
-        </div>
+        <div class="post-title">{{ page.title | escape }}</div>
         <div class="post-tag-list">
             {% for tag in page.tags %}
             <a class="post-tag" href="/tags/#{{ tag | slugize }}">{{ tag }}</a>
