@@ -1,0 +1,8 @@
+.post-item {
+    margin-top: $spacing-large;
+    padding-bottom: $spacing-large;
+}
+
+.post-item:not(:last-child) {
+    border-bottom: 1px solid $near-white;
+}

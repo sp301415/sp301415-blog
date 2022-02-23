@@ -7,5 +7,5 @@ Developed & Written by sp301415
 - Theme inspired by [Pixyll](https://github.com/johno/pixyll)
 - Syntax Highlighting by Rouge & [pygments-github-css](https://github.com/PhilipTrauner/pygments-github-css/blob/master/github.css)
 - Math Rendering by [KaTeX](https://katex.org/)
-- Comments by [Giscus](https://giscus.app/)
+- Comments by [giscus](https://giscus.app/)
 - Contact Form by [FormSpark](https://formspark.io/)
