@@ -108,3 +108,4 @@ vendor/
 # KaTeX 
 KaTeX_*.woff2
 _katex.scss
+katex.js

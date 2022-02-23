@@ -8,14 +8,15 @@ layout: default
         <div class="post-title">
             {{ page.title | escape }}
         </div>
-        <div class="post-tags">
+        <div class="post-tag-list">
             {% for tag in page.tags %}
-            <a class="tag" href="/tags/#{{ tag | slugize }}">{{ tag }}</a>
+            <a class="post-tag" href="/tags/#{{ tag | slugize }}">{{ tag }}</a>
             {% endfor %}
         </div>
     </header>
     <div class="post-content e-content" itemprop="articleBody">
         {{ content }}
+        <hr class="post-content-bottom-hr">
     </div>
 
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

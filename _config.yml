@@ -38,9 +38,12 @@ paginate_path: "/page/:num"
 
 markdown: kramdown
 kramdown:
-  input: GFMKatex
+  input: GFMInlineMath
   syntax_highlighter: rouge
-  math_engine: katex
+  math_engine: sskatex
+  math_engine_opts:
+    katex_js: _plugins/katex.js
+    js_run: MiniRacer
   footnote_backlink: "&#8617;&#xfe0e;"
 
 sass:

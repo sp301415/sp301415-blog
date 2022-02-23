@@ -1,5 +1,5 @@
 .post-item {
-    padding-top: $spacing-large;
+    margin-top: $spacing-large;
     padding-bottom: $spacing-large;
 }
 
@@ -10,15 +10,15 @@
 .post-date {
     color: $gray;
 
-    padding-top: $spacing-extra-small;
-    padding-bottom: $spacing-extra-small;
+    margin-top: $spacing-extra-small;
+    margin-bottom: $spacing-extra-small;
 }
 
 .post-title {
     // Same as H1
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
-    font-size: $font-size-2;
+    font-size: $h1-font-size;
 
     word-break: keep-all;
     word-wrap: break-word;
@@ -26,7 +26,7 @@
     margin-bottom: $spacing-medium;
 }
 
-.tag {
+.post-tag {
     color: $dark-gray;
     background-color: $light-gray;
     border-radius: $border-radius-2;
@@ -39,26 +39,32 @@
     padding-right: $spacing-small;
 }
 
-.tag:hover {
+.post-tag:hover {
     opacity: .7;
 }
 
-.tag + .tag {
+.post-tag + .post-tag {
     margin-left: $spacing-extra-small;
 }
 
 .post-header {
-    padding-top: $spacing-large;
+    margin-top: $spacing-large;
 }
 
 .post-content {
     margin-top: $spacing-large;
 }
 
-.post-footer {
-    margin-top: $spacing-extra-large;
-    // Remove giscus's own 3rem padding
+.post-content-bottom-hr {
+    margin-top: $spacing-extra-large
+}
+
+// Override when footnotes exist.
+.footnotes + .post-content-bottom-hr {
+    margin-top: $spacing-large; 
+}
+
+// Remove giscus's own 3rem margin-bottom.
+.giscus {
     margin-bottom: -3rem;
-    padding-top: $spacing-large;
-    border-top: 1px solid $moon-gray;
 }

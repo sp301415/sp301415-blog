@@ -4,17 +4,17 @@ permalink: /tags/
 title: Tags
 ---
 
-<div class="tag-content">
+<div class="post-tag-list">
     <div class="list">
         {% assign tags_list = site.tags %}
 
         {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-        <a class="tag" href="#{{ tag | slugify }}">{{ tag }}</a>
+        <a class="post-tag" href="#{{ tag | slugify }}">{{ tag }}</a>
         {% endfor %}
         {% else %}
         {% for tag in tags_list %}
-        <a class="tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        <a class="post-tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
         {% endfor %}
         {% endif %}
 

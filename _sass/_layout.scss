@@ -5,14 +5,10 @@
 body {
     margin: 0;
 
-    // Fix footer below
+    // put footer below page (also see: _footer.scss)
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-footer {
-    margin-top: auto
 }
 
 .page-content {
