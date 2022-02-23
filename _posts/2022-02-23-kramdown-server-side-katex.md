@@ -1,7 +1,7 @@
 ---
 title: kramdown에서의 KaTeX 서버 측 렌더링 구현기
 tags: [개발]
-description: Jekyll과 Kramdown에서 KaTeX의 서버 측 렌더링 기능을 구현하면서, 삽질한 부분들을 정리합니다.
+description: Jekyll과 kramdown에서 KaTeX의 서버 측 렌더링 기능을 구현하면서, 삽질한 부분들을 정리합니다.
 ---
 
 얼마 전 블로그를 새로 개발했다. 원래는 [Pixyll](https://github.com/johno/pixyll) 테마를 적당히 수정해서 쓰고 있었는데, HTML과 CSS를 더 배우고 싶기도 했고, 나만의 공간을 직접 꾸며보고 싶다는 생각에 밑바닥부터 다시 개발한 것이다. 
@@ -38,7 +38,7 @@ Dir.mkdir(JS_PATH) unless File.exists?(JS_PATH)
 File.write("#{JS_PATH}/katex.js", katex_js)
 ```
 
-이제 이 파일을 `_plugins` 디렉토리에 넣으면, Jekyll이 알아서 컴파일 전에 이 파일을 실행시킨다. 마지막으로, CSS에 `@include 'katex'`를 적어주고, `_config.yml`에 
+이제 이 파일을 `_plugins` 디렉토리에 넣으면, Jekyll이 알아서 컴파일 전에 이 파일을 실행시킨다. 마지막으로, CSS에 `@include 'katex';`를 적어주고, `_config.yml`에 
 
 ```yml
 kramdown:
@@ -57,7 +57,7 @@ kramdown:
 
 그렇다고 좌절할 수는 없다. 처음에는 Jekyll의 Hook 기능을 써서 직접 파서를 짜보기로 했다. 파싱까지는 regex 매칭을 이용하면 크게 어렵지는 않았지만, 문제는 예외 케이스가 너무 많다는 것이었다. 일단 코드 블럭 안의 달러는 무시해야 하고, 앞에 escape 문자를 붙인 달러 `\$`도 무시해야 하고... 등등.
 
-결국 내가 선택한 방법은 kramdown의 파서를 직접 연장하는 것이었다. kramdown의 [parser.rb](https://github.com/gettalong/kramdown/blob/master/lib/kramdown/parser/kramdown.rb)를 보면, 간단한 설명과 함께 도큐먼테이션이 적혀 있다. 이것을 참고해서 루비 파일을 작성했다.
+결국 내가 선택한 방법은 kramdown의 파서를 직접 연장하는 것이었다. kramdown의 [parser.rb](https://github.com/gettalong/kramdown/blob/master/lib/kramdown/parser/kramdown.rb)를 보면, 간단한 설명과 함께 파서 구현 예제가 적혀 있다. 이것을 참고해서 루비 파일을 작성했다.
 
 ```ruby
 require 'kramdown/parser/kramdown'
@@ -90,4 +90,4 @@ kramdown:
 
 ## 결론
 
-처음에는 간단할 줄 알았는데 어쩌다 보니 kramdown의 소스코드까지 분석하고 있을 줄은 꿈에도 몰랐다. Gatsby같은 NodeJS 기반의 프레임워크에서는 그냥 플러그인 하나 추가하는 것으로 쉽게 끝나는 것 같던데, Jekyll은 루비 기반이다 보니 자바스크립트와는 상성이 잘 맞지 않는 것 같다. 길게 보면 결국 Gatsby로 넘어가야 할 것 같은데, 자바스크립트를 언제 배울 수 있을지... 일단 내가 원하는 기능은 어찌저찌 구현이 되었으니 블로그 글이나 열심히 써야겠다.
+처음에는 간단할 줄 알았는데 어쩌다 보니 kramdown의 소스코드까지 분석하게 됐다. Gatsby같은 NodeJS 기반의 프레임워크에서는 그냥 플러그인 하나 추가하는 것으로 쉽게 끝나는 것 같던데, Jekyll은 루비 기반이다 보니 자바스크립트와는 상성이 잘 맞지 않는 듯하다. 길게 보면 결국 Gatsby로 넘어가는 것이 좋을 것 같지만, 자바스크립트를 언제 배울 수 있을지... 일단 내가 원하는 기능은 어찌저찌 구현이 되었으니 블로그 글이나 열심히 써야겠다.
