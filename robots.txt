@@ -3,7 +3,6 @@
 
 User-agent: *
 
-Disallow: /assets/
 Disallow: /static/
 
 Disallow: /404

@@ -28,7 +28,7 @@ title: Tags
     {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <div class="tag-item-list" id="#{{ tag_name | slugize }}">
-        <a name="{{ tag_name | slugize }}" hidden=""></a>
+        <a name="{{ tag_name | slugize }}"></a>
         <h2 class="tag-heading"> {{ tag_name }}</h3>
             {% for post in site.tags[tag_name] %}
             <p class="tag-item">
