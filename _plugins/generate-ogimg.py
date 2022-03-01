@@ -16,7 +16,7 @@ BLACK = "#333"
 GRAY = "#777"
 
 BLOG_NAME = "Null Space"
-DEFAULT_INFO_TEXT = "a blog by sp301415"
+DEFAULT_INFO_TEXT = "sp301415의 블로그"
 POSTPATH = "./_posts"
 
 titlefont = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
