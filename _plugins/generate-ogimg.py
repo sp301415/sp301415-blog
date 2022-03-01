@@ -6,7 +6,7 @@ import os
 BOLD_FONT_URL = "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf"
 LIGHT_FONT_URL = "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf"
 
-OPENGRAPH_SIZE = (1200, 600)
+OPENGRAPH_SIZE = (1200, 630)
 
 OFFSET_X = 180
 OFFSET_Y = 90
@@ -17,13 +17,13 @@ GRAY = "#777"
 
 BLOG_NAME = "Null Space"
 DEFAULT_INFO_TEXT = "a blog by sp301415"
-POSTPATH = "../_posts"
+POSTPATH = "./_posts"
 
 titlefont = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
 infofont = ImageFont.truetype(urlopen(LIGHT_FONT_URL), size=40)
 
-if not os.path.exists("../assets/ogimg"):
-    os.mkdir("../assets/ogimg")
+if not os.path.exists("./assets/ogimg"):
+    os.mkdir("./assets/ogimg")
 
 for filename in os.listdir(POSTPATH):
     if not filename.endswith(".md"):
@@ -69,7 +69,7 @@ for filename in os.listdir(POSTPATH):
     filename = filename.strip(".md")
     filename = "-".join(filename.split("-")[3:])
 
-    img.save(f"../assets/ogimg/{filename}.jpg")
+    img.save(f"./assets/ogimg/{filename}.jpg")
 
 # Generate Default image.
 img = Image.new("RGB", OPENGRAPH_SIZE, color=WHITE)
@@ -89,4 +89,4 @@ res.text(
     fill=GRAY,
 )
 
-img.save(f"../assets/ogimg/default.jpg")
+img.save(f"./assets/ogimg/default.jpg")
