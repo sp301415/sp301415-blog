@@ -174,7 +174,7 @@ $$
 \lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert < {3 \over 4}\lVert \mathbf b^\ast_i \rVert^2
 $$
 
-이다. 이제, swap한 뒤의 벡터들을 $\tilde {\mathbf b}$라고 하자. 특히, $\tilde {\mathbf b}\_i = \mathbf b_{i+1}$, $\tilde{\mathbf b}\_{i+1} = \mathbf b_i$이다. 그러면 $\tilde d_l$은 어떻게 될까? 만약 $l < i$라면, $\tilde{\mathbf b}\_k = \mathbf b_k$이므로, $d_l = \tilde d_l$일 것이다. 만약 $l \ge i+1$이라면, $d_l$과 $\tilde d_l$ 모두 $\mathbf b_1, \cdots, \mathbf b_i, \mathbf b_{i+1}$을 포함하므로, 역시 $d_l = \tilde d_l$일 것이다. 따라서, 다음이 성립한다.
+이다. 이제, swap한 뒤의 벡터들을 $\tilde {\mathbf b}$라고 하자. 특히, $\tilde {\mathbf b}_i = \mathbf b_{i+1}$, $\tilde{\mathbf b}_{i+1} = \mathbf b_i$이다. 그러면 $\tilde d_l$은 어떻게 될까? 만약 $l < i$라면, $\tilde{\mathbf b}_k = \mathbf b_k$이므로, $d_l = \tilde d_l$일 것이다. 만약 $l \ge i+1$이라면, $d_l$과 $\tilde d_l$ 모두 $\mathbf b_1, \cdots, \mathbf b_i, \mathbf b_{i+1}$을 포함하므로, 역시 $d_l = \tilde d_l$일 것이다. 따라서, 다음이 성립한다.
 
 $$
 {\tilde d_i \over d_i} = {\lVert \tilde{\mathbf b}_i^\ast \rVert^2 \over \lVert \mathbf b_i^\ast \rVert^2}
