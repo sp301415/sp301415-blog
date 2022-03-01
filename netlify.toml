@@ -1,0 +1,10 @@
+# Remove assets from search results
+[[headers]]
+for = "/assets/ogimg/*"
+[headers.values]
+X-Robots-Tag = "noindex"
+
+[[headers]]
+for = "/static/*"
+[headers.values]
+X-Robots-Tag = "noindex"

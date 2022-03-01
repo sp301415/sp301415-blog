@@ -33,9 +33,6 @@ github_username:  sp301415
 # Build settings
 permalink: /:title/
 
-paginate: 6
-paginate_path: "/page/:num"
-
 markdown: kramdown
 kramdown:
   input: GFMInlineMath
@@ -50,7 +47,7 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
 
@@ -80,6 +77,7 @@ defaults:
       path: ""
     values:
       image: /assets/ogimg/default.jpg
+      sitemap: false
       robots: noindex
   -
     scope:
@@ -88,3 +86,10 @@ defaults:
     values:
       layout: post
       robots: all
+      sitemap: true
+  -
+    scope:
+      path: "index.html"
+    values:
+      robots: all
+      sitemap: true

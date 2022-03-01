@@ -109,3 +109,6 @@ vendor/
 KaTeX_*.woff2
 _katex.scss
 katex.js
+
+# Opengraph Images
+/assets/ogimg/

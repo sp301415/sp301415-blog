@@ -3,14 +3,12 @@
 
 User-agent: *
 
+Disallow: /assets/ogimg/
 Disallow: /static/
 
 Disallow: /404
-Disallow: /thanks/
 
-Disallow: /page/
 Disallow: /about/
 Disallow: /tags/
-Disallow: /contact/
 
 Sitemap: {{ site.url }}/sitemap.xml
