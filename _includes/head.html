@@ -6,16 +6,15 @@
 
     <title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title | strip_html }}</title>
 
-    <link rel="stylesheet" href="/assets/css/main.css">
-
     {% seo title=false %}
 
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="/feed.xml" />
+    <!--Favicons-->
+    <link rel="icon" href='{{ "/favicon.ico" | relative_url}}' sizes="any">
+    <link rel="icon" type="image/svg+xml" href='{{ "/assets/favicon/favicon.svg" | relative_url}}'>
+    <link rel="apple-touch-icon" sizes="180x180" href='{{"/assets/favicon/apple-touch-icon.png" | relative_url}}'>
+    <link rel="manifest" href='{{"/assets/favicon/manifest.json" | relative_url }}'>
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href='{{ "/assets/css/main.css" | relative_url }}'>
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}"
+        href='{{"/feed.xml" | relative_url}}' />
 </head>
