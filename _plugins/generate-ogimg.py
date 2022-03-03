@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 from urllib.request import urlopen
-from textwrap import wrap
+from textwrap import wrap, fill
 import os
 
 BOLD_FONT_URL = "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf"
@@ -19,8 +19,9 @@ BLOG_NAME = "Null Space"
 DEFAULT_INFO_TEXT = "sp301415의 블로그"
 POSTPATH = "./_posts"
 
-titlefont = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
-infofont = ImageFont.truetype(urlopen(LIGHT_FONT_URL), size=40)
+title_font = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
+info_font = ImageFont.truetype(urlopen(LIGHT_FONT_URL), size=40)
+info_height = info_font.getsize(BLOG_NAME)[1]
 
 if not os.path.exists("./assets/ogimg"):
     os.mkdir("./assets/ogimg")
@@ -41,52 +42,61 @@ for filename in os.listdir(POSTPATH):
                 text = line[line.find(":") + 1 :].strip()
                 break
 
-    titlelines = wrap(text, width=15)
-    titleheight = 0
-    for line in titlelines:
-        titleheight += titlefont.getsize(line)[1]
-    for line in titlelines[:-1]:
-        titleheight += titlefont.getsize(line)[1] * 0.2
-    infoheight = infofont.getsize(BLOG_NAME)[1]
+    wrap_width = len(text)  # sane default value
+    while True:
+        title = wrap(text, wrap_width)
+        title_fits = [
+            title_font.getsize(t)[0] <= OPENGRAPH_SIZE[0] - 2 * OFFSET_X for t in title
+        ]
+        if all(title_fits):
+            break
+        wrap_width -= 1
 
-    # Upper margin: OFFSET_Y, Lower margin: OFFSET_Y + infoheight
-    # Center text accordingly.
-    middle = (OFFSET_Y + (OPENGRAPH_SIZE[1] - OFFSET_Y)) / 2 - infoheight
-    titlepos = middle - titleheight / 2
+    title = fill(text, wrap_width)
 
-    y = titlepos
-    for line in titlelines:
-        res.text((OFFSET_X, y), line, font=titlefont, fill=BLACK)
-        y += titlefont.getsize(line)[1] * 1.2
+    res.multiline_text(
+        xy=(OFFSET_X, (OFFSET_Y + (OPENGRAPH_SIZE[1] - OFFSET_Y)) / 2 - info_height),
+        text=title,
+        font=title_font,
+        fill=BLACK,
+        anchor="lm",
+        spacing=25,
+    )
 
     res.text(
-        (OFFSET_X, OPENGRAPH_SIZE[1] - OFFSET_Y - infoheight),
-        BLOG_NAME,
-        font=infofont,
+        xy=(OFFSET_X, OPENGRAPH_SIZE[1] - OFFSET_Y - info_height),
+        text=BLOG_NAME,
+        font=info_font,
         fill=GRAY,
+        anchor="lm",
+        spacing=25,
     )
 
     filename = filename.strip(".md")
     filename = "-".join(filename.split("-")[3:])
 
-    img.save(f"./assets/ogimg/{filename}.jpg")
+    img.save(f"./assets/ogimg/{filename}.png")
 
 # Generate Default image.
 img = Image.new("RGB", OPENGRAPH_SIZE, color=WHITE)
 res = ImageDraw.Draw(img)
 
-titleheight = titlefont.getsize(BLOG_NAME)[1]
-infoheight = infofont.getsize(DEFAULT_INFO_TEXT)[1]
-
-middle = (OFFSET_Y + (OPENGRAPH_SIZE[1] - OFFSET_Y)) / 2 - infoheight
-titlepos = middle - titleheight / 2
-
-res.text((OFFSET_X, titlepos), BLOG_NAME, font=titlefont, fill=BLACK)
-res.text(
-    (OFFSET_X, OPENGRAPH_SIZE[1] - OFFSET_Y - infoheight),
-    DEFAULT_INFO_TEXT,
-    font=infofont,
-    fill=GRAY,
+res.multiline_text(
+    xy=(OFFSET_X, (OFFSET_Y + (OPENGRAPH_SIZE[1] - OFFSET_Y)) / 2 - info_height),
+    text=BLOG_NAME,
+    font=title_font,
+    fill=BLACK,
+    anchor="lm",
+    spacing=25,
 )
 
-img.save(f"./assets/ogimg/default.jpg")
+res.text(
+    xy=(OFFSET_X, OPENGRAPH_SIZE[1] - OFFSET_Y - info_height),
+    text=DEFAULT_INFO_TEXT,
+    font=info_font,
+    fill=GRAY,
+    anchor="lm",
+    spacing=25,
+)
+
+img.save(f"./assets/ogimg/default.png")
