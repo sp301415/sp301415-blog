@@ -105,7 +105,7 @@ Equioscillation Theorem에 따라서, 등호는 $p$가 최적 근사이고 $x_i$
 
 ## Haar Condition
 
-지금까지 우리는 $p$를 다항식으로 가정해 왔다. 그런데, 사실은 위에서 살펴본 내용 중에 다항식의 특수한 성질을 이용한 내용은 없었다. 즉, Equioscllation Theorem은 조금 더 일반적인 $p$에 대해서도 성립한다. 우리는 그 조건을 하르 조건(Haar Condition)이라고 한다.
+지금까지 우리는 $p$를 다항식으로 가정해 왔다. 그런데, 사실은 위에서 살펴본 내용 중에 다항식의 특수한 성질을 이용한 내용은 없었다. 즉, Equioscillation Theorem은 조금 더 일반적인 $p$에 대해서도 성립한다. 우리는 그 조건을 하르 조건(Haar Condition)이라고 한다.
 
 **Definition.** (Haar Condition.) 서로 선형 독립인 연속 함수 $v_1, \cdots, v_n$에 대해서, 0이 아닌 함수 $p = a_1v_1 + \cdots + a_nv_n$이 언제나 $n-1$개의 해를 갖는다고 하자. 이 조건을 하르 조건(Haar Condition)이라고 하며, $v_1, \cdots, v_n$이 생성하는 공간을 체비셰프 시스템(Chebyshev system)이라고 한다.
 
