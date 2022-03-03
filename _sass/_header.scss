@@ -15,6 +15,18 @@
 .site-title {
     font-size: $font-size-3;
     font-weight: 700;
+
+    background: linear-gradient(to left, #f80759, #bc4e9c);
+    background-clip: text;
+    color: transparent;
+    transition: opacity .15s ease-in;
+}
+
+.site-title:hover,
+.site-title:focus,
+.site-title:active {
+    opacity: .7;
+    color: transparent;
 }
 
 .site-nav {
