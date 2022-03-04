@@ -36,7 +36,7 @@ $$
 
 **Theorem.** 미니맥스 근사 문제의 해답은 존재한다.
 
-**pf.** 구간 $[a, b]$에서 연속인 함수를 $\mathcal C[a,b]$라고 하고, 최대 $n$차의 다항식들의 집합을 $\mathcal P_n$이라고 하자. 그러면 $\mathcal P_n$은 (normed, linear space) $\mathcal C[a,b]$의 finite-dimensional subspace가 된다. $p \in \mathcal P_n$이 주어진 문제의 정답이라고 하자. 그러면, 적어도 $\lVert f - p \rVert < \lVert f \rVert$여야 한다. 즉, $p$는 집합 $K = \{q \in P_n: \lVert f - q \rVert < \lVert f \rVert \}$ 내부에 존재한다. 이제 사상 $L(q) = \lVert f - q \rVert$를 생각하면, $K$는 컴팩트이고 $L$은 연속이므로 $L$을 최소화하는 점이 $K$ 내부에 존재하고, 이 점이 우리가 찾던 $p$이다.
+**pf.** 구간 $[a, b]$에서 연속인 함수를 $\mathcal C[a,b]$라고 하고, 최대 $n$차의 다항식들의 집합을 $\mathcal P_n$이라고 하자. 그러면 $\mathcal P_n$은 (normed, linear space) $\mathcal C[a,b]$의 finite-dimensional subspace가 된다. $p \in \mathcal P_n$이 주어진 문제의 정답이라고 하자. 그러면, 적어도 $\lVert f - p \rVert < \lVert f \rVert$여야 한다. 즉, $p$는 집합 $K = \{q \in \mathcal P_n: \lVert f - q \rVert < \lVert f \rVert \}$ 내부에 존재한다. 이제 사상 $L(q) = \lVert f - q \rVert$를 생각하면, $K$는 컴팩트이고 $L$은 연속이므로 $L$을 최소화하는 점이 $K$ 내부에 존재하고, 이 점이 우리가 찾던 $p$이다.
 
 ## Alternating Sets and Chebyshev Equioscillation Theorem
 
