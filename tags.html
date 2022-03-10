@@ -5,33 +5,31 @@ title: Tags
 ---
 
 <div class="post-tag-list">
-    <div class="list">
-        {% assign tags_list = site.tags %}
+    {% assign tags_list = site.tags %}
 
-        {% if tags_list.first[0] == null %}
-        {% for tag in tags_list %}
-        <a class="post-tag" href="#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
-        {% else %}
-        {% for tag in tags_list %}
-        <a class="post-tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-        {% endfor %}
-        {% endif %}
+    {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+    <a class="post-tag" href="#{{ tag | slugify }}">{{ tag }}</a>
+    {% endfor %}
+    {% else %}
+    {% for tag in tags_list %}
+    <a class="post-tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+    {% endfor %}
+    {% endif %}
 
-        {% assign tags_list = nil %}
-    </div>
+    {% assign tags_list = nil %}
 </div>
 
 <hr>
 
-<div class="tags-wrapper">
+<div class="archive-wrapper">
     {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    <div class="tag-item-list" id="#{{ tag_name | slugize }}">
+    <div class="archive-list" id="#{{ tag_name | slugize }}">
         <a name="{{ tag_name | slugize }}"></a>
-        <h2 class="tag-heading"> {{ tag_name }}</h3>
+        <h2 class="archive-title"> {{ tag_name }}</h3>
             {% for post in site.tags[tag_name] %}
-            <p class="tag-item">
+            <p class="archive-item">
                 <a href="{{ site.baseurl }}{{ post.url }}">
                     {{post.title}}
                 </a>

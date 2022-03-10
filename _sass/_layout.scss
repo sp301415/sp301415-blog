@@ -13,6 +13,11 @@ body {
     padding: $spacing-medium;
 }
 
+.measure {
+    margin: 0 auto; 
+    max-width: $measure;
+}
+
 @media print {
     .site-header, .site-footer {
         display: none;
@@ -21,8 +26,4 @@ body {
 
 img {
     max-width: 100%;
-}
-
-.gsc-timeline.input-top {
-    padding-bottom: $spacing-medium;
 }
