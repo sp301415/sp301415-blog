@@ -3,8 +3,8 @@ from urllib.request import urlopen
 from textwrap import wrap, fill
 import os
 
-BOLD_FONT_URL = "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf"
-LIGHT_FONT_URL = "https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf"
+BOLD_FONT_URL = "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/public/static/Pretendard-Bold.otf"
+LIGHT_FONT_URL = "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/public/static/Pretendard-Regular.otf"
 
 OPENGRAPH_SIZE = (1200, 630)
 
