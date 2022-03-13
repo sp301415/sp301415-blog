@@ -1,5 +1,6 @@
 html {
     font-size: $base-font-size;
+    -webkit-text-size-adjust: 100%;
 }
 
 abbr {
@@ -61,7 +62,7 @@ p,
 dl,
 ol,
 ul {
-    font-weight: 400;
+    font-weight: normal;
 
     margin-top: 0;
     margin-bottom: $spacing-medium;
@@ -88,6 +89,10 @@ input[class=task-list-item-checkbox] {
     margin-right: $spacing-small;
 }
 
+b,
+strong {
+	font-weight: $bold-font-weight;
+}
 
 pre {
     overflow-x: auto;
@@ -119,6 +124,8 @@ pre code {
 }
 
 hr {
+    height: 0;
+    
     margin-top: $spacing-large;
     margin-bottom: $spacing-large;
     border: 0;

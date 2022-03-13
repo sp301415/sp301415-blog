@@ -3,6 +3,8 @@
 }
 
 body {
+    margin: 0;
+    
     // put footer below page (also see: _footer.scss)
     display: flex;
     flex-direction: column;
