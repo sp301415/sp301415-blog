@@ -3,9 +3,6 @@
 
 User-agent: *
 
-Disallow: /assets/ogimg/
-Disallow: /static/
-
 Disallow: /404
 
 Disallow: /about/
