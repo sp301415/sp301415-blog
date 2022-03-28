@@ -53,8 +53,3 @@
 .footnotes + .post-content-bottom-hr {
     margin-top: $spacing-large; 
 }
-
-// Remove giscus's own 3rem margin-bottom.
-.giscus {
-    margin-bottom: -3rem;
-}
