@@ -21,8 +21,6 @@
     background-color: $light-gray;
     border-radius: $border-radius-2;
 
-    transition: opacity .15s ease-in;
-
     padding-top: $spacing-extra-small;
     padding-bottom: $spacing-extra-small;
     padding-left: $spacing-small;
@@ -33,7 +31,7 @@
     opacity: .7;
 }
 
-.post-tag + .post-tag {
+.post-tag+.post-tag {
     margin-left: $spacing-extra-small;
 }
 
@@ -50,6 +48,6 @@
 }
 
 // Override when footnotes exist.
-.footnotes + .post-content-bottom-hr {
-    margin-top: $spacing-large; 
+.footnotes+.post-content-bottom-hr {
+    margin-top: $spacing-large;
 }

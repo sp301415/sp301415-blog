@@ -1,20 +1,20 @@
-a {
+a,
+a:visited {
     text-decoration: none;
-    color: $blue; 
-    transition: color .15s ease-in;
+    color: $blue;
 }
 
 
-a:hover, 
-a:focus, 
+a:hover,
+a:focus,
 a:active {
     color: $dark-gray;
 }
 
-.dark-link {
+.dark-link,
+.dark-link:visited {
     text-decoration: none;
     color: $dark-gray;
-    transition: opacity .15s ease-in;
 }
 
 .dark-link:hover,
