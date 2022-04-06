@@ -1,8 +1,10 @@
-# sp301415.github.io
+# sp301415-blog
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0048feee-a24d-4f7b-aad8-ad37698317a2/deploy-status)](https://app.netlify.com/sites/sp301415-blog/deploys)
 
-My tiny little space on the Internet.
+https://blog.sp301415.com
+
+My tiny little space on the Internet. 
 
 ## 블로그 정보
 - Built with Netlify & Jekyll

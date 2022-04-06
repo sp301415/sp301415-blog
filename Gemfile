@@ -13,7 +13,7 @@ gem "webrick"
 
 # Kramdown extensions
 gem "rouge"
-gem 'kramdown-math-sskatex'
+gem "kramdown-math-sskatex"
 gem "execjs"
 gem "mini_racer"
 
