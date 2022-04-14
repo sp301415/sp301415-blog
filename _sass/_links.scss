@@ -1,25 +1,20 @@
-a,
-a:visited {
+a {
     text-decoration: none;
     color: $blue;
 }
 
 
-a:hover,
-a:focus,
-a:active {
-    color: $dark-gray;
+a:hover {
+    text-decoration: underline;
 }
 
-.dark-link,
-.dark-link:visited {
+.dark-link {
     text-decoration: none;
     color: $dark-gray;
 }
 
-.dark-link:hover,
-.dark-link:focus,
-.dark-link:active {
+.dark-link:hover {
+    text-decoration: none;
     color: $dark-gray;
     opacity: .7;
 }
