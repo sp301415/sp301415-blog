@@ -73,7 +73,7 @@ defaults:
     scope:
       path: ""
     values:
-      image: /assets/ogimg/default.png
+      image: /assets/opengraph/default.png
       sitemap: false
       robots: noindex
   -

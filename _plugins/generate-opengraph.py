@@ -23,8 +23,8 @@ title_font = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
 info_font = ImageFont.truetype(urlopen(LIGHT_FONT_URL), size=40)
 info_height = info_font.getsize(BLOG_NAME)[1]
 
-if not os.path.exists("./assets/ogimg"):
-    os.mkdir("./assets/ogimg")
+if not os.path.exists("./assets/opengraph"):
+    os.mkdir("./assets/opengraph")
 
 for filename in os.listdir(POSTPATH):
     if not filename.endswith(".md"):
@@ -75,7 +75,7 @@ for filename in os.listdir(POSTPATH):
     filename = filename.strip(".md")
     filename = "-".join(filename.split("-")[3:])
 
-    img.save(f"./assets/ogimg/{filename}.png")
+    img.save(f"./assets/opengraph/{filename}.png")
 
 # Generate Default image.
 img = Image.new("RGB", OPENGRAPH_SIZE, color=WHITE)
@@ -99,4 +99,4 @@ res.text(
     spacing=25,
 )
 
-img.save(f"./assets/ogimg/default.png")
+img.save(f"./assets/opengraph/default.png")
