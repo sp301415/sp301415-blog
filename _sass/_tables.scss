@@ -6,7 +6,8 @@ table {
 
 }
 
-th, td {
+th,
+td {
     border: 1px solid $black-10;
 }
 
@@ -20,7 +21,7 @@ th {
     padding-right: $spacing-medium;
 }
 
-tbody tr:nth-child(odd){
+tbody tr:nth-child(odd) {
     background-color: $near-white;
 }
 

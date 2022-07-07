@@ -1,6 +1,5 @@
 html {
     font-size: $base-font-size;
-    -webkit-text-size-adjust: 100%;
 }
 
 abbr {
@@ -13,7 +12,7 @@ body {
     color: $dark-gray;
     background-color: white;
 }
-  
+
 h1,
 h2,
 h3,
@@ -22,7 +21,7 @@ h5,
 h6 {
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
-    
+
     margin-top: 2.5 * $spacing-medium;
     margin-bottom: $spacing-medium;
 }
@@ -73,13 +72,13 @@ ul {
     padding-left: $spacing-large;
 }
 
-ol > li,
-ul > li {
+ol>li,
+ul>li {
     margin-bottom: $spacing-small;
 }
 
-li > ol,
-li > ul{
+li>ol,
+li>ul {
     // If nested
     margin-top: $spacing-small;
     margin-bottom: 0;
@@ -91,7 +90,7 @@ input[class=task-list-item-checkbox] {
 
 b,
 strong {
-	font-weight: $bold-font-weight;
+    font-weight: $bold-font-weight;
 }
 
 pre {
@@ -125,7 +124,7 @@ pre code {
 
 hr {
     height: 0;
-    
+
     margin-top: $spacing-large;
     margin-bottom: $spacing-large;
     border: 0;
