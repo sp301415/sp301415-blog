@@ -1,7 +1,6 @@
 ---
 title: 애플 실리콘용 sage와 pwntools 설치 에러 해결
 tags: [개발, 암호학]
-description: 애플 실리콘에서 sage와 pwntools를 같이 설치할때 생기는 에러를 해결하는 법을 공유합니다.
 ---
 
 ### TL;DR
@@ -14,6 +13,7 @@ conda install sage
 순으로 하면 된다.
 
 CTF에서 crypto 문제를 풀 때, 수학 계산을 위해선 보통 `sage`를 쓰고, 소켓 통신을 위해선 `pwntools`를 쓴다. 나 같은 경우에는 conda 환경을 만들어서 사용하는데, 애플 실리콘이 들어간 맥을 사용하고부터는 두 개를 함께 설치하려고 하니 문제가 생겼다.
+<!--more-->
 
 일단 conda를 이용해 `sage`를 설치하고, `pwntools`를 설치하려고 했더니 에러를 뿜는 것을 볼 수 있었다.
 ```

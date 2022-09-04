@@ -20,7 +20,9 @@
 
 title: Null Space
 email: sp301415@gmail.com
-author: sp301415
+author: 
+  name: sp301415
+  url: https://sp301415.com
 description: "sp301415의 블로그"
 baseurl: ""
 url: "https://blog.sp301415.com"
@@ -29,6 +31,7 @@ locale: ko_KR
 
 # Build settings
 permalink: /:title/
+excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:

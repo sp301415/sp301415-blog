@@ -1,7 +1,6 @@
 ---
 title: MIT 졸업생 95%가 못 푼다는 문제 풀기
 tag: [개발, 수학]
-description: MIT 졸업생 95%가 못 푼다고 인터넷에 돌아다니는 짤방. 직접 풀어봤습니다.
 ---
 
 인터넷에서 어그로를 열심히 끌던 다음 문제를 기억하는 사람이 있을 것이다.
@@ -9,6 +8,7 @@ description: MIT 졸업생 95%가 못 푼다고 인터넷에 돌아다니는 짤
 ![95% of people can't solve this!](/static/image/95-cant-solve-this/problem.jpeg)
 
 국내 인터넷에는 [MIT 졸업생 95%가 못 푸는 문제](https://www.dogdrip.net/331446820)라는 이름으로 돌아다니는 것 같다. [나무위키](https://namu.wiki/w/디오판토스%20방정식)에도 잘 설명이 되어 있듯이, 이 문제는 전형적인 디오판토스 문제이다.
+<!--more-->
 
 다행히도, 이 문제는 Bremmer와 Macleod에 의해 이미 연구되어서, 우리까지 머리를 싸매고 고민할 필요는 없다. 둘의 논문은 [여기](https://ami.uni-eszterhazy.hu/uploads/papers/finalpdf/AMI_43_from29to41.pdf)에서 확인할 수 있다. 심심해서 이 논문을 구현한 코드를 직접 짜 보았다. $N = 4$뿐만 아니라 다른 경우에 대해서도 해를 찾을 수 있다. 실행에는 SageMath가 필요하다.
 

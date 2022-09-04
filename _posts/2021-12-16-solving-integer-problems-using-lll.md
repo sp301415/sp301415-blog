@@ -1,12 +1,12 @@
 ---
 title: LLL 알고리즘으로 정수 문제 풀기
 tag: [수학]
-description: 격자 이론의 아이디어를 이용하면 정수 문제를 색다른 각도에서 접근해서 풀 수 있습니다.
 ---
 
 ## Integer Problems
 
 정수 문제는 일반적으로 **아주 어렵다**. 그렇기 때문에 수학자들은 아주 오래 전부터 정수 문제를 풀기 위한 방법을 고안해냈다. 예를 들어서, 다음의 아주 일반적인 문제를 살펴보자.
+<!--more-->
 
 **Problem.** (Integer Relation).  $a_1,  \cdots, a_n \in \R$에 대해서, 다음을 만족하는 non-trivial solution $x_1, \cdots, x_n \in \Z$를 찾으시오.
 

@@ -3,8 +3,8 @@ from urllib.request import urlopen
 from textwrap import wrap, fill
 import os
 
-BOLD_FONT_URL = "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/public/static/Pretendard-Bold.otf"
-LIGHT_FONT_URL = "https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/public/static/Pretendard-Regular.otf"
+BOLD_FONT_URL = "https://cdn.jsdelivr.net/npm/pretendard@latest/dist/public/static/Pretendard-Bold.otf"
+LIGHT_FONT_URL = "https://cdn.jsdelivr.net/npm/pretendard@latest/dist/public/static/Pretendard-Regular.otf"
 
 OPENGRAPH_SIZE = (1200, 630)
 
@@ -21,7 +21,7 @@ POSTPATH = "./_posts"
 
 title_font = ImageFont.truetype(urlopen(BOLD_FONT_URL), size=80)
 info_font = ImageFont.truetype(urlopen(LIGHT_FONT_URL), size=40)
-info_height = info_font.getsize(BLOG_NAME)[1]
+info_height = info_font.getbbox(BLOG_NAME)[3]
 
 if not os.path.exists("./assets/opengraph"):
     os.mkdir("./assets/opengraph")
@@ -46,7 +46,7 @@ for filename in os.listdir(POSTPATH):
     while True:
         title = wrap(text, wrap_width)
         title_fits = [
-            title_font.getsize(t)[0] <= OPENGRAPH_SIZE[0] - 2 * OFFSET_X for t in title
+            title_font.getlength(t) <= OPENGRAPH_SIZE[0] - 2 * OFFSET_X for t in title
         ]
         if all(title_fits):
             break

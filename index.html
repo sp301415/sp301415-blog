@@ -15,7 +15,7 @@ layout: home
             {% if post.description %}
             {{ post.description }}
             {% else %}
-            {{ post.excerpt }}
+            {{ post.excerpt | strip_html }} [...]
             {% endif %}
         </span>
     </div>
