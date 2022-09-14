@@ -25,9 +25,7 @@ var stdio = bufio.NewReadWriter(
 func main() {
 	defer stdio.Flush()
 
-	var a, b int
-	fmt.Fscan(stdio, &a, &b)
-	fmt.Fprintln(stdio, a+b)
+	// Code goes here
 }
 ```
 
@@ -49,7 +47,9 @@ var stdio = bufio.NewReadWriter(
 func main() {
 	defer stdio.Flush()
 
-    // Code goes here
+	var a, b int
+	fmt.Fscan(stdio, &a, &b)
+	fmt.Fprintln(stdio, a+b)
 }
 ```
 
@@ -114,3 +114,14 @@ func (h *Heap[T]) Pop() any {
 	return x
 }
 ```
+
+### Pair
+```go
+type Pair[T1, T2 any] struct {
+	First  T1
+	Second T2
+}
+```
+
+## int vs int64
+잘 알려져있다시피 Go의 `int`형은 구현에 따라 크기가 다르다. 일반적으로 통용되는 것은 `int`형은 64비트 시스템의 경우 64비트, 32비트 시스템의 경우 32비트라는 것이다. 백준 같은 사이트는 채점 서버가 64비트이므로, 그냥 `int`를 써도 상관이 없다. 그러나 코드포스 같은 곳은 32비트 채점 서버를 쓰므로 오버플로우 문제에 걸리기 싫다면 반드시 `int64`형을 써야 한다. 이 문제는 특히 Go에서 정수의 기본 타입이 `int`형이라 더 골치아프다. `a := 0` 같은 표현 대신 `var a int64 = 0` 혹은 `a := int64(0)`으로 명시를 해야 한다.
