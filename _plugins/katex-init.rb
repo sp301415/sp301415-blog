@@ -5,7 +5,7 @@ KATEX_URL = "https://cdn.jsdelivr.net/npm/katex@latest/dist"
 
 # Download css to _katex.scss
 katex_css = URI.open("#{KATEX_URL}/katex.min.css").read()
-File.write("_sass/_katex.scss", katex_css)
+File.write("_sass/katex.scss", katex_css)
 
 # Download fonts
 CSS_PATH = "assets/css"

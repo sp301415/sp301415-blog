@@ -105,9 +105,9 @@ _site/
 .bundle/
 vendor/
 
-# KaTeX 
+# KaTeX
 KaTeX_*.woff2
-_katex.scss
+katex.scss
 katex.js
 
 # Opengraph Images
