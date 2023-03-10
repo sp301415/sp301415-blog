@@ -24,7 +24,7 @@ $$
 a_1x_1 + \cdots + a_nx_n - M = 0, \quad x_i = 1 \text{ or } 0
 $$
 
-이제 $S = \{a_i \mid x_i = 1\}$가 Subset Sum Problem의 해가 된다. 따라서, Subset Sum Problem은 조건이 더 빡빡한 Integer Relation Problem이라고 볼 수 있다. 
+이제 $S = \{a_i \mid x_i = 1\}$가 Subset Sum Problem의 해가 된다. 따라서, Subset Sum Problem은 조건이 더 빡빡한 Integer Relation Problem이라고 볼 수 있다.
 
 오늘 이 글에서는, 이러한 정수 문제들을 기하학적으로 접근하는 방법에 대해 다룰 것이다.
 
@@ -75,7 +75,7 @@ SVP를 푸는 가장 직관적인 답은 기저의 수직성(Orthogonality)를 �
 
 **Claim.** 기저 $\mathbf B$가 orthogonal하다고 하자. 그렇다면, $\lambda_1 = \min \mathbf b_i $이다.
 
-**pf.** 직관적으로 당연하다. $\lambda_1 = \sum a_i\mathbf b_i$라고 하자. 이 때 일반성을 잃지 않고 $a_i \neq 0$이라고 하자. (즉, coefficient가 nonzero인 기저만 생각하자). 그렇다면, 
+**pf.** 직관적으로 당연하다. $\lambda_1 = \sum a_i\mathbf b_i$라고 하자. 이 때 일반성을 잃지 않고 $a_i \neq 0$이라고 하자. (즉, coefficient가 nonzero인 기저만 생각하자). 그렇다면,
 
 $$
 \begin{align*}
@@ -107,7 +107,7 @@ LLL(Lenstra-Lenstra-Lovasz) Algorithm은 1982년에 Arjen Lenstra, Hendrik Lenst
 **Definition.** (LLL-Reduced Basis) $\mathcal L$의 기저 $\mathbf B$와, 그것을 Gram-Schmidt한 기저 $\mathbf B^\ast$을 생각하자. (이 때, 물론 $\mathbf B^\ast \subset \R^n$이다.) $\mathbf B$와 $\mathbf B^\ast$가 다음 조건을 만족한다면, $\mathbf B$를 $\mathcal L$의 **LLL-Reduced Basis**라고 한다.
 
 1. (Size Condition.) $\displaystyle \lvert \mu_{i, j} \rvert = \left\lvert {\langle \mathbf b_i, \mathbf b^\ast_j \rangle \over \lVert \mathbf b_j \rVert^2} \right\rvert \le {1 \over 2} $
-2. (Lovasz Condition.) $\displaystyle \lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert \ge {3 \over 4}\lVert \mathbf b^\ast_i \rVert^2$
+2. (Lovasz Condition.) $\displaystyle \lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert^2 \ge {3 \over 4}\lVert \mathbf b^\ast_i \rVert^2$
 
 Lovasz Condition의 $3/4$는 다른 값 $1/4 < \delta < 1$로 대체될 수 있다. 첫 번째 조건을 이해하는 것은 크게 어렵지 않을 것이다. Gram-Schmidt Orthogonalization에서 $\mu$ 대신 $\lceil \mu \rfloor$를 써서 근사하는 것과 동치이기 때문이다. 두 번째 조건은 살짝 이해하기 까다로운데, 접근하는 두 가지 방법이 있다.
 
@@ -115,7 +115,7 @@ Lovasz Condition의 $3/4$는 다른 값 $1/4 < \delta < 1$로 대체될 수 있�
 
 $$
 \begin{align*}
-\lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert &= \lVert \mathbf b_{i+1}^\ast \rVert^2  + \mu_{i+1, i}^2 \lVert \mathbf b_i^\ast \rVert ^2 \\
+\lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert^2 &= \lVert \mathbf b_{i+1}^\ast \rVert^2  + \mu_{i+1, i}^2 \lVert \mathbf b_i^\ast \rVert ^2 \\
 &\ge {3 \over 4}\lVert \mathbf b_i^\ast \rVert^2 \\
 \lVert \mathbf b_{i+1}^\ast \rVert^2 &\ge \left({3 \over 4} - \mu_{i+1, i}^2 \right)\lVert \mathbf b_i^\ast \rVert^2 \\
 &\ge {1 \over 2} \lVert \mathbf b_i^\ast \rVert^2
@@ -124,7 +124,7 @@ $$
 
 이므로, $\mathbf b_{i+1}^\ast$의 길이가 $\mathbf b_i^\ast$의 길이보다 아주 짧을 수는 없다. 즉, Orthogonal한 벡터들의 순서를 어느 정도 강제한다. 그리고, $\delta > 1/4$여야 한다는 사실도 알 수 있다.
 
-두 번째 접근은 조금 더 엄밀하다. Gram-Schmidt를 거칠게 요약하자면, $\mathbf b_i$를 $\operatorname{span} (\mathbf b_1, \cdots, \mathbf b_{i-1})^{\perp}$로 사영(projection) 시키는 것이다. 이 정의에서 Lovasz condition을 바라본다면, 우변은 $\mathbf b_{i+1}$을 $\operatorname{span} (\mathbf b_1, \cdots, \mathbf b_{i-1})^{\perp}$에 사영시킨 것이고, 좌변은 $\mathbf b_i$를 이 평면에 사영시킨 것이다. 따라서, 비슷하게 이 조건은 벡터들의 순서를 강제하는 것이라고 이해할 수 있다. 만약 $\delta = 1$이라면, 이 순서를 엄밀하게 지킨다는 뜻이 될 것이다. 
+두 번째 접근은 조금 더 엄밀하다. Gram-Schmidt를 거칠게 요약하자면, $\mathbf b_i$를 $\operatorname{span} (\mathbf b_1, \cdots, \mathbf b_{i-1})^{\perp}$로 사영(projection) 시키는 것이다. 이 정의에서 Lovasz condition을 바라본다면, 우변은 $\mathbf b_{i+1}$을 $\operatorname{span} (\mathbf b_1, \cdots, \mathbf b_{i-1})^{\perp}$에 사영시킨 것이고, 좌변은 $\mathbf b_i$를 이 평면에 사영시킨 것이다. 따라서, 비슷하게 이 조건은 벡터들의 순서를 강제하는 것이라고 이해할 수 있다. 만약 $\delta = 1$이라면, 이 순서를 엄밀하게 지킨다는 뜻이 될 것이다.
 
 LLL Algorithm은 LLL-Reduced Basis의 정의에서 자연스럽게 따라나온다.
 
@@ -160,7 +160,7 @@ Lower Bound는 조금 까다롭다. 먼저, $d_l = (\det \mathbf B_l^\ast)^2$임
 $$
 \mathbf B_l = \begin{bmatrix}
 1 & 0 \\
-\mu & 1 
+\mu & 1
 \end{bmatrix} \mathbf B_l^\ast
 $$
 
@@ -171,7 +171,7 @@ $$
 **pf.** Step 1에서 $\mathbf B^\ast$가 바뀌지 않음은 쉽게 확인할 수 있다. Step 2에서, $\mathbf b_i$와 $\mathbf b_{i+1}$를 swap했다고 가정하자. 그 뜻은, Lovasz Condition이 만족되지 않았다는 뜻이므로,
 
 $$
-\lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert < {3 \over 4}\lVert \mathbf b^\ast_i \rVert^2
+\lVert \mathbf b_{i+1}^\ast + \mu_{i+1, i}\mathbf b^\ast_i \rVert^2 < {3 \over 4}\lVert \mathbf b^\ast_i \rVert^2
 $$
 
 이다. 이제, swap한 뒤의 벡터들을 $\tilde {\mathbf b}$라고 하자. 특히, $\tilde {\mathbf b}_i = \mathbf b_{i+1}$, $\tilde{\mathbf b}_{i+1} = \mathbf b_i$이다. 그러면 $\tilde d_l$은 어떻게 될까? 만약 $l < i$라면, $\tilde{\mathbf b}_k = \mathbf b_k$이므로, $d_l = \tilde d_l$일 것이다. 만약 $l \ge i+1$이라면, $d_l$과 $\tilde d_l$ 모두 $\mathbf b_1, \cdots, \mathbf b_i, \mathbf b_{i+1}$을 포함하므로, 역시 $d_l = \tilde d_l$일 것이다. 따라서, 다음이 성립한다.
@@ -197,7 +197,7 @@ $$
 **Theorem.** $\mathcal L$의 LLL-Reduced Basis를 $\mathbf B$라고 하자. 그렇다면 다음이 성립한다.
 
 $$
-\lambda_1 \le {\sqrt 2}^{n-1} \lVert \mathbf b_1 \rVert 
+\lambda_1 \le {\sqrt 2}^{n-1} \lVert \mathbf b_1 \rVert
 $$
 
 즉, LLL은 SVP를 $\sqrt 2^{n-1}$의 factor로 푼다.
@@ -214,7 +214,7 @@ $$
 &= \left\lVert \sum a_i \sum \mu_{i, j} \mathbf b_i^\ast \right\rVert^2 \quad (\mu_{i, i} = 1) \\
 &= \lVert a_1 \mathbf b_1^\ast + a_2(\mathbf b_2^\ast + \mu_{2, 1}\mathbf b_1^\ast) + \cdots \rVert^2 \\
 &\ge a_n^2 \lVert \mathbf b_n^\ast \rVert^2 \\
-&\ge \lVert \mathbf b_{\text{min}}^\ast \rVert^2 
+&\ge \lVert \mathbf b_{\text{min}}^\ast \rVert^2
 \end{align*}
 $$
 
@@ -235,14 +235,14 @@ $$
 지금까지 Integer Problem을 SVP로 바꾼 뒤, LLL을 통해 풀 수 있다는 것을 살펴보았다. 꼭 여기에 있는 문제가 아니더라도, 좋은 조건만 있으면 LLL 알고리즘은 좋은 해결책이 될 수 있다. 일반적으로는 다음과 같은 사고방식을 따르면 좋다.
 
 1. 문제에서 어떻게든 크기가 작고 선형인 해를 뽑아낸다.
-2. 적당한 Lattice를 만들어서 1. 에서 구한 작은 해가 SVP의 정답이 되도록 만든다. 
+2. 적당한 Lattice를 만들어서 1. 에서 구한 작은 해가 SVP의 정답이 되도록 만든다.
     - 이 글에서 자세히 다루지 않았지만, 여기서 target vector의 크기의 좋은 가늠은 $\sqrt n (\det \mathcal L)^{1/n}$ 정도이다. 이 값보다 작다면, SVP를 통해 찾을 수 있을 가능성이 높다.
 3. LLL을 통해 SVP를 푼다.
 4. PROFIT!
 
 ### Subset Sum Problem using LLL
 
-위에서, 특수한 종류의 Subset Sum Problem을 다항 시간 안에 풀 수 있다고 했다. 이 특수한 조건이란 $a_i = O(2^{2n})$ 정도로, 개수에 비해 크기가 아주 큰 조건을 말한다. 이 경우 LO-Attack을 통해 Subset Sum Problem을 풀 수 있다. (후에 CJLOSS 알고리즘을 통해 이 bound는 $O(2^n)$ 정도까지 개선되었다.) 
+위에서, 특수한 종류의 Subset Sum Problem을 다항 시간 안에 풀 수 있다고 했다. 이 특수한 조건이란 $a_i = O(2^{2n})$ 정도로, 개수에 비해 크기가 아주 큰 조건을 말한다. 이 경우 LO-Attack을 통해 Subset Sum Problem을 풀 수 있다. (후에 CJLOSS 알고리즘을 통해 이 bound는 $O(2^n)$ 정도까지 개선되었다.)
 
 여기에서는 $n = 5$인 다음의 경우를 풀어보도록 하자.
 ```python
@@ -276,7 +276,7 @@ $$
 \end{bmatrix}
 $$
 
-각 row들을 $\mathbf b_i$라고 하면, 
+각 row들을 $\mathbf b_i$라고 하면,
 
 $$
 \begin{align*}
@@ -334,6 +334,6 @@ print(sol) # [1562, 1381, 1540]
 print(sum(sol), target) # 4483 4483
 ```
 
-## 맺음말 
+## 맺음말
 
-이 글에서는 정수에 관련된 문제를 격자로 옮긴 뒤, LLL 알고리즘을 통해 푸는 방법을 알아보았다. 꼭 Integer Relation Problem과 관련된 문제가 아니라도, LLL은 초월수 판별, 정수계수 다항식 인수분해 등 다양한 문제에 폭넓게 쓰일 수 있는 강력한 알고리즘이다. 특히, 암호학계에서는 RSA의 가장 강력한 공격 중 하나인 Coppersmith Theorem에 응용된다. (언젠간 이에 대해서 다뤄볼 생각이다.) 꼭 응용이 아니더라도, 한 분야의 문제를 다른 분야로 옮겨서 푼다는 아이디어 자체가 수학적으로도 매력적이라고 생각한다. 
+이 글에서는 정수에 관련된 문제를 격자로 옮긴 뒤, LLL 알고리즘을 통해 푸는 방법을 알아보았다. 꼭 Integer Relation Problem과 관련된 문제가 아니라도, LLL은 초월수 판별, 정수계수 다항식 인수분해 등 다양한 문제에 폭넓게 쓰일 수 있는 강력한 알고리즘이다. 특히, 암호학계에서는 RSA의 가장 강력한 공격 중 하나인 Coppersmith Theorem에 응용된다. (언젠간 이에 대해서 다뤄볼 생각이다.) 꼭 응용이 아니더라도, 한 분야의 문제를 다른 분야로 옮겨서 푼다는 아이디어 자체가 수학적으로도 매력적이라고 생각한다.
