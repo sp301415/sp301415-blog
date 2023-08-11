@@ -5,7 +5,7 @@ User-agent: *
 
 Disallow: /404
 
-Disallow: /about/
-Disallow: /tags/
+Disallow: /about
+Disallow: /tags
 
 Sitemap: {{ site.url }}/sitemap.xml
