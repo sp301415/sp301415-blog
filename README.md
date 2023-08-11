@@ -1,7 +1,5 @@
 # sp301415-blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7ad0a51f-16f0-4692-aa6d-1e3b18fa35e9/deploy-status)](https://app.netlify.com/sites/sp301415-blog/deploys)
-
 https://blog.sp301415.com
 
 My tiny little space on the Internet.
