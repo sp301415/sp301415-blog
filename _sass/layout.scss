@@ -19,7 +19,7 @@ body {
 
 .measure {
     margin: 0 auto;
-    max-width: $measure;
+    max-width: $max-width;
 }
 
 @media print {

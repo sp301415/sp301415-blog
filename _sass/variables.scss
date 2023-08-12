@@ -5,7 +5,7 @@ $font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sa
 $monospace-font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace !default;
 $line-height: 1.75 !default;
 
-$heading-font-weight: $bold-font-weight  !default;
+$heading-font-weight: $bold-font-weight !default;
 $heading-line-height: 1.25 !default;
 
 // Tachyons
@@ -26,9 +26,7 @@ $line-height-solid: 1 !default;
 $line-height-title: 1.25 !default;
 $line-height-copy: 1.5 !default;
 
-$measure: 730px !default;
-$measure-narrow: 20em !default;
-$measure-wide: 34em !default;
+$max-width: 730px !default;
 
 $spacing-none: 0 !default;
 $spacing-extra-small: .25rem !default;
@@ -147,9 +145,4 @@ $washed-yellow: #fffceb !default;
 $washed-red: #ffdfdf !default;
 
 // Custom Media Query Variables
-
-$breakpoint-not-small: 'screen and (min-width: 30em)' !default;
-$breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !default;
-$breakpoint-large: 'screen and (min-width: 60em)' !default;
-
-$media-phone: 'screen and (min-width: 600px)' !default;
+$breakpoint: 'screen and (min-width: 600px)' !default;
