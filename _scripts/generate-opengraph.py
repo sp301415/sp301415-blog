@@ -75,7 +75,7 @@ for filename in os.listdir(POSTPATH):
     filename = filename.strip(".md")
     filename = "-".join(filename.split("-")[3:])
 
-    img.save(f"./assets/opengraph/{filename}.png")
+    img.save(f"./assets/opengraph/{filename}.png", optimize=True)
 
 # Generate Default image.
 img = Image.new("RGB", OPENGRAPH_SIZE, color=WHITE)
@@ -99,4 +99,4 @@ res.text(
     spacing=25,
 )
 
-img.save(f"./assets/opengraph/default.png")
+img.save(f"./assets/opengraph/default.png", optimize=True)

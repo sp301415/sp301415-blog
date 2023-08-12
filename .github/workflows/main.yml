@@ -22,7 +22,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build Opengraph Images
-        run: python _plugins/generate-opengraph.py
+        run: python _scripts/generate-opengraph.py
+
+      - name: Optimize Images
+        run: python _scripts/optimize-images.py
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
