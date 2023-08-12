@@ -16,6 +16,6 @@ katex_css.scan(/src:url\((.*?)\)/).each { |font|
 
 # Download katex
 katex_js = URI.open("#{KATEX_URL}/katex.min.js").read()
-JS_PATH = "_plugins"
+JS_PATH = "_scripts"
 Dir.mkdir(JS_PATH) unless File.exist?(JS_PATH)
 File.write("#{JS_PATH}/katex.js", katex_js)

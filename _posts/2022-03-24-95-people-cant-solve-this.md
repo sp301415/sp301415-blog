@@ -5,7 +5,7 @@ tag: [개발, 수학]
 
 인터넷에서 어그로를 열심히 끌던 다음 문제를 기억하는 사람이 있을 것이다.
 
-![95% of people can't solve this!](/static/image/95-cant-solve-this/problem.jpeg)
+![95% of people can't solve this!](/static/image/95-cant-solve-this/problem.jpg)
 
 국내 인터넷에는 [MIT 졸업생 95%가 못 푸는 문제](https://www.dogdrip.net/331446820)라는 이름으로 돌아다니는 것 같다. [나무위키](https://namu.wiki/w/디오판토스%20방정식)에도 잘 설명이 되어 있듯이, 이 문제는 전형적인 디오판토스 문제이다.
 <!--more-->
@@ -82,7 +82,7 @@ assert a / (b + c) + b / (c + a) + c / (b + a) == N
 ```
 ([GitHub Gist](https://gist.github.com/sp301415/64812b2fc882422b066712a5169144b2))
 
-이제 당신도 상위 5% 수잘알이 되었다!! 
+이제 당신도 상위 5% 수잘알이 되었다!!
 
 자세한 설명은 역시 나보다는 논문을 참고하는 것이 더 좋을 것 같다. 핵심적인 관찰은, 주어진 방정식은 다음과 같은 ($\mathbb Q$ 위의) 타원 곡선으로 변형할 수 있다는 것이다.
 
