@@ -57,7 +57,7 @@ tag: [영화]
 
 ## 빛을 향한 그리움 *Nostalgia de la Luz*
 
-![Nostalgia for the Light](/static/images/top-ten-films/Nostalgia%20for%20the%20Light.png)
+![Nostalgia for the Light](/static/images/top-ten-films/Nostalgia%20For%20The%20Light.png)
 
 파트리시오 구스만 *Patricio Guzmán*, 2010
 
