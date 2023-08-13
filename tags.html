@@ -8,13 +8,13 @@ title: Tags
     {% assign tags_list = site.tags %}
 
     {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %}
-    <a class="post-tag" href="#{{ tag | slugify }}">{{ tag }}</a>
-    {% endfor %}
+        {% for tag in tags_list %}
+            <a class="post-tag" href="#{{ tag | slugify }}">{{ tag }}</a>
+        {% endfor %}
     {% else %}
-    {% for tag in tags_list %}
-    <a class="post-tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-    {% endfor %}
+        {% for tag in tags_list %}
+            <a class="post-tag" href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% endfor %}
     {% endif %}
 
     {% assign tags_list = nil %}
@@ -24,17 +24,20 @@ title: Tags
 
 <div class="archive-wrapper">
     {% for tag in site.tags %}
-    {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    <div class="archive-list" id="#{{ tag_name | slugize }}">
-        <a name="{{ tag_name | slugize }}"></a>
-        <h2 class="archive-title"> {{ tag_name }}</h3>
+        {% capture tag_name %}
+            {{ tag | first }}{% endcapture %}
+        <div class="archive-list" id="#{{ tag_name | slugize }}">
+            <a name="{{ tag_name | slugize }}"></a>
+            <h2 class="archive-title">
+                {{ tag_name }}
+            </h2>
             {% for post in site.tags[tag_name] %}
-            <p class="archive-item">
-                <a href="{{ site.baseurl }}{{ post.url }}">
-                    {{post.title}}
-                </a>
-            </p>
+                <p class="archive-item">
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </p>
             {% endfor %}
-    </div>
+        </div>
     {% endfor %}
 </div>

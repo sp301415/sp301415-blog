@@ -2,29 +2,42 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry">
     <header class="post-header">
         <div class="post-date">{{ page.date | date: site.date_format }}</div>
         <div class="post-title">{{ page.title | escape }}</div>
         <div class="post-tag-list">
             {% for tag in page.tags %}
-            <a class="post-tag" href="/tags/#{{ tag | slugize }}">{{ tag }}</a>
+                <a class="post-tag" href="/tags/#{{ tag | slugize }}">{{ tag }}</a>
             {% endfor %}
         </div>
     </header>
 
-    <div class="post-content e-content" itemprop="articleBody">
+    <div class="post-content e-content">
         {{ content }}
         <hr class="post-content-bottom-hr">
     </div>
 
-    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <a
+        class="u-url"
+        href="{{ page.url | relative_url }}"
+        hidden></a>
 
     <footer class="post-footer">
-        <script src="https://giscus.app/client.js" data-repo="sp301415/sp301415-blog" data-repo-id="R_kgDOG66ScQ"
-            data-category="Comments" data-category-id="DIC_kwDOG66Scc4CBXd7" data-mapping="og:title"
-            data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="light"
-            data-loading="lazy" data-lang="ko" crossorigin="anonymous" async>
-            </script>
+        <script
+            src="https://giscus.app/client.js"
+            data-repo="sp301415/sp301415-blog"
+            data-repo-id="R_kgDOG66ScQ"
+            data-category="Comments"
+            data-category-id="DIC_kwDOG66Scc4CBXd7"
+            data-mapping="og:title"
+            data-reactions-enabled="0"
+            data-emit-metadata="0"
+            data-input-position="top"
+            data-theme="light"
+            data-loading="lazy"
+            data-lang="ko"
+            crossorigin="anonymous"
+            async></script>
     </footer>
 </article>
