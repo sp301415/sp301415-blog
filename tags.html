@@ -24,14 +24,12 @@ title: Tags
 
 <div class="archive-wrapper">
     {% for tag in site.tags %}
-        {% capture tag_name %}
-            {{ tag | first }}{% endcapture %}
         <div class="archive-list" id="#{{ tag_name | slugize }}">
-            <a name="{{ tag_name | slugize }}"></a>
+            <a name="{{ tag[0] | slugize }}"></a>
             <h2 class="archive-title">
-                {{ tag_name }}
+                {{ tag[0] }}
             </h2>
-            {% for post in site.tags[tag_name] %}
+            {% for post in tag[1] %}
                 <p class="archive-item">
                     <a href="{{ site.baseurl }}{{ post.url }}">
                         {{ post.title }}
