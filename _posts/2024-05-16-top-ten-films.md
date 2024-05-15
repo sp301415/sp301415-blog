@@ -25,23 +25,17 @@ tag: [영화]
 
 안드레이 타르코프스키 *Андрей Тарковский*, 1966
 
+## 지옥의 묵시록 *Apocalypse Now*
+
+![Apocalypse Now](/static/images/top-ten-films/Apocalypse%20Now.png)
+
+프랜시스 포드 코폴라 *Francis Ford Coppola*, 1979
+
 ## 코야니스카시 *Koyaanisqatsi*
 
 ![Koyaanisqatsi](/static/images/top-ten-films/Koyaanisqatsi.png)
 
 갓프리 레지오 *Godfrey Reggio*, 1982
-
-## 브라질 *Brazil*
-
-![Brazil](/static/images/top-ten-films/Brazil.png)
-
-테리 길리엄 *Terry Gilliam*, 1985
-
-## 넘버 3
-
-![No. 3](/static/images/top-ten-films/No%203.png)
-
-송능한, 1997
 
 ## 매그놀리아 *Magnolia*
 
@@ -66,3 +60,9 @@ tag: [영화]
 ![Upstream Color](/static/images/top-ten-films/Upstream%20Color.png)
 
 쉐인 카루스 *Shane Carruth*, 2013
+
+## 월드 오브 투모로우 *World Of Tomorrow*
+
+![World Of Tomorrow](/static/images/top-ten-films/World%20Of%20Tomorrow.png)
+
+돈 허츠펠트 *Don Hertzfelt*, 2015
