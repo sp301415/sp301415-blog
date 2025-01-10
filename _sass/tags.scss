@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .archive-item {
     font-weight: $bold-font-weight;
     margin-bottom: $spacing-small;

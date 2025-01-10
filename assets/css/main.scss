@@ -1,19 +1,18 @@
 --- 
 --- 
 
-@import "variables";
-@import "normalize";
+@use "normalize";
 
-@import "footer";
-@import "header";
-@import "index";
-@import "katex";
-@import "katex-custom";
-@import "layout";
-@import "links";
-@import "post";
-@import "syntax-highlight";
-@import "tables";
-@import "tags";
-@import "typography";
-@import "utilities";
+@use "footer";
+@use "header";
+@use "index";
+@use "katex";
+@use "katex-custom";
+@use "layout";
+@use "links";
+@use "post";
+@use "syntax-highlight";
+@use "tables";
+@use "tags";
+@use "typography";
+@use "utilities";
