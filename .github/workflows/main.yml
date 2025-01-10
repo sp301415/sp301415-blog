@@ -9,7 +9,7 @@ jobs:
     name: Build and Deploy Jekyll Site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -32,9 +32,8 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 57dee0c3071a38e49addeeedaebbb4ea
-          projectName: sp301415-blog
-          directory: _site
+          command: pages deploy _site --project-name=sp301415-blog
