@@ -37,11 +37,11 @@ tag: [영화]
 
 프랜시스 포드 코폴라 *Francis Ford Coppola*, 1979
 
-## 매그놀리아 *Magnolia*
+## 스탑 메이킹 센스 *Stop Making Sense*
 
-![Magnolia](/static/images/top-ten-films/Magnolia.png)
+![Magnolia](/static/images/top-ten-films/Stop%20Making%20Sense.png)
 
-폴 토마스 엔더슨 *Paul Thomas Anderson*, 1999
+조나단 드미 *Jonathan Demme*, 1984
 
 ## 하나 그리고 둘 *一一*
 
