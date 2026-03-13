@@ -13,12 +13,6 @@ tag: [영화]
 
 버스터 키튼 *Buster Keaton*, 1922
 
-## 이키루 *生きる*
-
-![Ikiru](/static/images/top-ten-films/Ikiru.png)
-
-구로사와 아키라 *黒澤 明*, 1952
-
 ## 산딸기 *Smultronstället*
 
 ![Wild Strawberries](/static/images/top-ten-films/Wild%20Strawberries.png)
@@ -31,11 +25,17 @@ tag: [영화]
 
 안드레이 타르코프스키 *Андрей Тарковский*, 1966
 
-## 지옥의 묵시록 *Apocalypse Now*
+## 삼포 가는 길
 
-![Apocalypse Now](/static/images/top-ten-films/Apocalypse%20Now.png)
+![The Road to Sampo](/static/images/top-ten-films/The%20Road%20To%20Sampo.png)
 
-프랜시스 포드 코폴라 *Francis Ford Coppola*, 1979
+이만희, 1975
+
+## 올 댓 재즈 *All That Jazz*
+
+![All That Jazz](/static/images/top-ten-films/All%20That%20Jazz.png)
+
+밥 포시 *Bob Fosse*, 1979
 
 ## 스탑 메이킹 센스 *Stop Making Sense*
 
